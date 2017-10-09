@@ -1,1 +1,2 @@
-github "alternatiph/Protobuf-Swift" "1b89256"
+#github "alternatiph/Protobuf-Swift" "3.0.7-b"
+github "apple/swift-protobuf"
