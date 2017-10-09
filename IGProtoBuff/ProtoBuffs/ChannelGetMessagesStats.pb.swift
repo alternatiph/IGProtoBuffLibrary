@@ -19,37 +19,37 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct IGPChannelGetMessagesStats: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPChannelGetMessagesStats"
+public struct IGPChannelGetMessagesStats: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPChannelGetMessagesStats"
 
-  var igpRequest: IGPRequest {
+  public var igpRequest: IGPRequest {
     get {return _storage._igpRequest ?? IGPRequest()}
     set {_uniqueStorage()._igpRequest = newValue}
   }
   /// Returns true if `igpRequest` has been explicitly set.
-  var hasIgpRequest: Bool {return _storage._igpRequest != nil}
+  public var hasIgpRequest: Bool {return _storage._igpRequest != nil}
   /// Clears the value of `igpRequest`. Subsequent reads from it will return its default value.
-  mutating func clearIgpRequest() {_storage._igpRequest = nil}
+  public mutating func clearIgpRequest() {_storage._igpRequest = nil}
 
-  var igpRoomID: Int64 {
+  public var igpRoomID: Int64 {
     get {return _storage._igpRoomID}
     set {_uniqueStorage()._igpRoomID = newValue}
   }
 
-  var igpMessageID: [Int64] {
+  public var igpMessageID: [Int64] {
     get {return _storage._igpMessageID}
     set {_uniqueStorage()._igpMessageID = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -67,7 +67,7 @@ struct IGPChannelGetMessagesStats: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._igpRequest {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -85,45 +85,45 @@ struct IGPChannelGetMessagesStats: SwiftProtobuf.Message {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct IGPChannelGetMessagesStatsResponse: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPChannelGetMessagesStatsResponse"
+public struct IGPChannelGetMessagesStatsResponse: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPChannelGetMessagesStatsResponse"
 
-  var igpResponse: IGPResponse {
+  public var igpResponse: IGPResponse {
     get {return _storage._igpResponse ?? IGPResponse()}
     set {_uniqueStorage()._igpResponse = newValue}
   }
   /// Returns true if `igpResponse` has been explicitly set.
-  var hasIgpResponse: Bool {return _storage._igpResponse != nil}
+  public var hasIgpResponse: Bool {return _storage._igpResponse != nil}
   /// Clears the value of `igpResponse`. Subsequent reads from it will return its default value.
-  mutating func clearIgpResponse() {_storage._igpResponse = nil}
+  public mutating func clearIgpResponse() {_storage._igpResponse = nil}
 
-  var igpStats: [IGPChannelGetMessagesStatsResponse.IGPStats] {
+  public var igpStats: [IGPChannelGetMessagesStatsResponse.IGPStats] {
     get {return _storage._igpStats}
     set {_uniqueStorage()._igpStats = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  struct IGPStats: SwiftProtobuf.Message {
-    static let protoMessageName: String = IGPChannelGetMessagesStatsResponse.protoMessageName + ".IGPStats"
+  public struct IGPStats: SwiftProtobuf.Message {
+    public static let protoMessageName: String = IGPChannelGetMessagesStatsResponse.protoMessageName + ".IGPStats"
 
-    var igpMessageID: Int64 = 0
+    public var igpMessageID: Int64 = 0
 
-    var igpViewsLabel: String = String()
+    public var igpViewsLabel: String = String()
 
-    var igpThumbsUpLabel: String = String()
+    public var igpThumbsUpLabel: String = String()
 
-    var igpThumbsDownLabel: String = String()
+    public var igpThumbsDownLabel: String = String()
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
 
     /// Used by the decoding initializers in the SwiftProtobuf library, not generally
     /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
     /// initializers are defined in the SwiftProtobuf library. See the Message and
     /// Message+*Additions` files.
-    mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
       while let fieldNumber = try decoder.nextFieldNumber() {
         switch fieldNumber {
         case 1: try decoder.decodeSingularInt64Field(value: &self.igpMessageID)
@@ -139,7 +139,7 @@ struct IGPChannelGetMessagesStatsResponse: SwiftProtobuf.Message {
     /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
     /// other serializer methods are defined in the SwiftProtobuf library. See the
     /// `Message` and `Message+*Additions` files.
-    func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
       if self.igpMessageID != 0 {
         try visitor.visitSingularInt64Field(value: self.igpMessageID, fieldNumber: 1)
       }
@@ -156,13 +156,13 @@ struct IGPChannelGetMessagesStatsResponse: SwiftProtobuf.Message {
     }
   }
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -179,7 +179,7 @@ struct IGPChannelGetMessagesStatsResponse: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._igpResponse {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -197,7 +197,7 @@ struct IGPChannelGetMessagesStatsResponse: SwiftProtobuf.Message {
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 extension IGPChannelGetMessagesStats: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_request"),
     2: .standard(proto: "IGP_room_id"),
     3: .standard(proto: "IGP_message_id"),
@@ -226,7 +226,7 @@ extension IGPChannelGetMessagesStats: SwiftProtobuf._MessageImplementationBase, 
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPChannelGetMessagesStats) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPChannelGetMessagesStats) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -244,7 +244,7 @@ extension IGPChannelGetMessagesStats: SwiftProtobuf._MessageImplementationBase, 
 }
 
 extension IGPChannelGetMessagesStatsResponse: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_response"),
     2: .standard(proto: "IGP_stats"),
   ]
@@ -270,7 +270,7 @@ extension IGPChannelGetMessagesStatsResponse: SwiftProtobuf._MessageImplementati
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPChannelGetMessagesStatsResponse) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPChannelGetMessagesStatsResponse) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -287,14 +287,14 @@ extension IGPChannelGetMessagesStatsResponse: SwiftProtobuf._MessageImplementati
 }
 
 extension IGPChannelGetMessagesStatsResponse.IGPStats: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_message_id"),
     2: .standard(proto: "IGP_views_label"),
     3: .standard(proto: "IGP_thumbs_up_label"),
     4: .standard(proto: "IGP_thumbs_down_label"),
   ]
 
-  func _protobuf_generated_isEqualTo(other: IGPChannelGetMessagesStatsResponse.IGPStats) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPChannelGetMessagesStatsResponse.IGPStats) -> Bool {
     if self.igpMessageID != other.igpMessageID {return false}
     if self.igpViewsLabel != other.igpViewsLabel {return false}
     if self.igpThumbsUpLabel != other.igpThumbsUpLabel {return false}

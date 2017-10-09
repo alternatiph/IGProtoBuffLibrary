@@ -19,66 +19,66 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct IGPClientCondition: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPClientCondition"
+public struct IGPClientCondition: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPClientCondition"
 
-  var igpRequest: IGPRequest {
+  public var igpRequest: IGPRequest {
     get {return _storage._igpRequest ?? IGPRequest()}
     set {_uniqueStorage()._igpRequest = newValue}
   }
   /// Returns true if `igpRequest` has been explicitly set.
-  var hasIgpRequest: Bool {return _storage._igpRequest != nil}
+  public var hasIgpRequest: Bool {return _storage._igpRequest != nil}
   /// Clears the value of `igpRequest`. Subsequent reads from it will return its default value.
-  mutating func clearIgpRequest() {_storage._igpRequest = nil}
+  public mutating func clearIgpRequest() {_storage._igpRequest = nil}
 
-  var igpRooms: [IGPClientCondition.IGPRoom] {
+  public var igpRooms: [IGPClientCondition.IGPRoom] {
     get {return _storage._igpRooms}
     set {_uniqueStorage()._igpRooms = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  struct IGPRoom: SwiftProtobuf.Message {
-    static let protoMessageName: String = IGPClientCondition.protoMessageName + ".IGPRoom"
+  public struct IGPRoom: SwiftProtobuf.Message {
+    public static let protoMessageName: String = IGPClientCondition.protoMessageName + ".IGPRoom"
 
-    var igpRoomID: Int64 = 0
+    public var igpRoomID: Int64 = 0
 
-    var igpMessageVersion: Int64 = 0
+    public var igpMessageVersion: Int64 = 0
 
-    var igpStatusVersion: Int64 = 0
+    public var igpStatusVersion: Int64 = 0
 
-    var igpDeleteVersion: Int64 = 0
+    public var igpDeleteVersion: Int64 = 0
 
-    var igpOfflineDeleted: [Int64] = []
+    public var igpOfflineDeleted: [Int64] = []
 
-    var igpOfflineEdited: [IGPClientCondition.IGPRoom.IGPOfflineEdited] = []
+    public var igpOfflineEdited: [IGPClientCondition.IGPRoom.IGPOfflineEdited] = []
 
-    var igpOfflineSeen: [Int64] = []
+    public var igpOfflineSeen: [Int64] = []
 
-    var igpClearID: Int64 = 0
+    public var igpClearID: Int64 = 0
 
-    var igpCacheStartID: Int64 = 0
+    public var igpCacheStartID: Int64 = 0
 
-    var igpCacheEndID: Int64 = 0
+    public var igpCacheEndID: Int64 = 0
 
-    var igpOfflineMute: IGPClientCondition.IGPRoom.IGPOfflineMute = .unchanged
+    public var igpOfflineMute: IGPClientCondition.IGPRoom.IGPOfflineMute = .unchanged
 
-    var igpOfflineListened: [Int64] = []
+    public var igpOfflineListened: [Int64] = []
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    enum IGPOfflineMute: SwiftProtobuf.Enum {
-      typealias RawValue = Int
+    public enum IGPOfflineMute: SwiftProtobuf.Enum {
+      public typealias RawValue = Int
       case unchanged // = 0
       case muted // = 1
       case unmuted // = 2
       case UNRECOGNIZED(Int)
 
-      init() {
+      public init() {
         self = .unchanged
       }
 
-      init?(rawValue: Int) {
+      public init?(rawValue: Int) {
         switch rawValue {
         case 0: self = .unchanged
         case 1: self = .muted
@@ -87,7 +87,7 @@ struct IGPClientCondition: SwiftProtobuf.Message {
         }
       }
 
-      var rawValue: Int {
+      public var rawValue: Int {
         switch self {
         case .unchanged: return 0
         case .muted: return 1
@@ -98,22 +98,22 @@ struct IGPClientCondition: SwiftProtobuf.Message {
 
     }
 
-    struct IGPOfflineEdited: SwiftProtobuf.Message {
-      static let protoMessageName: String = IGPClientCondition.IGPRoom.protoMessageName + ".IGPOfflineEdited"
+    public struct IGPOfflineEdited: SwiftProtobuf.Message {
+      public static let protoMessageName: String = IGPClientCondition.IGPRoom.protoMessageName + ".IGPOfflineEdited"
 
-      var igpMessageID: Int64 = 0
+      public var igpMessageID: Int64 = 0
 
-      var igpMessage: String = String()
+      public var igpMessage: String = String()
 
-      var unknownFields = SwiftProtobuf.UnknownStorage()
+      public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-      init() {}
+      public init() {}
 
       /// Used by the decoding initializers in the SwiftProtobuf library, not generally
       /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
       /// initializers are defined in the SwiftProtobuf library. See the Message and
       /// Message+*Additions` files.
-      mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+      public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
         while let fieldNumber = try decoder.nextFieldNumber() {
           switch fieldNumber {
           case 1: try decoder.decodeSingularInt64Field(value: &self.igpMessageID)
@@ -127,7 +127,7 @@ struct IGPClientCondition: SwiftProtobuf.Message {
       /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
       /// other serializer methods are defined in the SwiftProtobuf library. See the
       /// `Message` and `Message+*Additions` files.
-      func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+      public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
         if self.igpMessageID != 0 {
           try visitor.visitSingularInt64Field(value: self.igpMessageID, fieldNumber: 1)
         }
@@ -138,13 +138,13 @@ struct IGPClientCondition: SwiftProtobuf.Message {
       }
     }
 
-    init() {}
+    public init() {}
 
     /// Used by the decoding initializers in the SwiftProtobuf library, not generally
     /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
     /// initializers are defined in the SwiftProtobuf library. See the Message and
     /// Message+*Additions` files.
-    mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
       while let fieldNumber = try decoder.nextFieldNumber() {
         switch fieldNumber {
         case 2: try decoder.decodeSingularInt64Field(value: &self.igpRoomID)
@@ -168,7 +168,7 @@ struct IGPClientCondition: SwiftProtobuf.Message {
     /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
     /// other serializer methods are defined in the SwiftProtobuf library. See the
     /// `Message` and `Message+*Additions` files.
-    func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
       if self.igpRoomID != 0 {
         try visitor.visitSingularInt64Field(value: self.igpRoomID, fieldNumber: 2)
       }
@@ -209,13 +209,13 @@ struct IGPClientCondition: SwiftProtobuf.Message {
     }
   }
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -232,7 +232,7 @@ struct IGPClientCondition: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._igpRequest {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -247,27 +247,27 @@ struct IGPClientCondition: SwiftProtobuf.Message {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct IGPClientConditionResponse: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPClientConditionResponse"
+public struct IGPClientConditionResponse: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPClientConditionResponse"
 
-  var igpResponse: IGPResponse {
+  public var igpResponse: IGPResponse {
     get {return _storage._igpResponse ?? IGPResponse()}
     set {_uniqueStorage()._igpResponse = newValue}
   }
   /// Returns true if `igpResponse` has been explicitly set.
-  var hasIgpResponse: Bool {return _storage._igpResponse != nil}
+  public var hasIgpResponse: Bool {return _storage._igpResponse != nil}
   /// Clears the value of `igpResponse`. Subsequent reads from it will return its default value.
-  mutating func clearIgpResponse() {_storage._igpResponse = nil}
+  public mutating func clearIgpResponse() {_storage._igpResponse = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -283,7 +283,7 @@ struct IGPClientConditionResponse: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._igpResponse {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -298,7 +298,7 @@ struct IGPClientConditionResponse: SwiftProtobuf.Message {
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 extension IGPClientCondition: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_request"),
     2: .standard(proto: "IGP_rooms"),
   ]
@@ -324,7 +324,7 @@ extension IGPClientCondition: SwiftProtobuf._MessageImplementationBase, SwiftPro
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPClientCondition) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPClientCondition) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -341,7 +341,7 @@ extension IGPClientCondition: SwiftProtobuf._MessageImplementationBase, SwiftPro
 }
 
 extension IGPClientCondition.IGPRoom: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     2: .standard(proto: "IGP_room_id"),
     3: .standard(proto: "IGP_message_version"),
     4: .standard(proto: "IGP_status_version"),
@@ -356,7 +356,7 @@ extension IGPClientCondition.IGPRoom: SwiftProtobuf._MessageImplementationBase, 
     13: .standard(proto: "IGP_offline_listened"),
   ]
 
-  func _protobuf_generated_isEqualTo(other: IGPClientCondition.IGPRoom) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPClientCondition.IGPRoom) -> Bool {
     if self.igpRoomID != other.igpRoomID {return false}
     if self.igpMessageVersion != other.igpMessageVersion {return false}
     if self.igpStatusVersion != other.igpStatusVersion {return false}
@@ -375,7 +375,7 @@ extension IGPClientCondition.IGPRoom: SwiftProtobuf._MessageImplementationBase, 
 }
 
 extension IGPClientCondition.IGPRoom.IGPOfflineMute: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "UNCHANGED"),
     1: .same(proto: "MUTED"),
     2: .same(proto: "UNMUTED"),
@@ -383,12 +383,12 @@ extension IGPClientCondition.IGPRoom.IGPOfflineMute: SwiftProtobuf._ProtoNamePro
 }
 
 extension IGPClientCondition.IGPRoom.IGPOfflineEdited: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_message_id"),
     2: .standard(proto: "IGP_message"),
   ]
 
-  func _protobuf_generated_isEqualTo(other: IGPClientCondition.IGPRoom.IGPOfflineEdited) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPClientCondition.IGPRoom.IGPOfflineEdited) -> Bool {
     if self.igpMessageID != other.igpMessageID {return false}
     if self.igpMessage != other.igpMessage {return false}
     if unknownFields != other.unknownFields {return false}
@@ -397,7 +397,7 @@ extension IGPClientCondition.IGPRoom.IGPOfflineEdited: SwiftProtobuf._MessageImp
 }
 
 extension IGPClientConditionResponse: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_response"),
   ]
 
@@ -420,7 +420,7 @@ extension IGPClientConditionResponse: SwiftProtobuf._MessageImplementationBase, 
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPClientConditionResponse) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPClientConditionResponse) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0

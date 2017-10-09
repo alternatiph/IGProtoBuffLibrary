@@ -19,27 +19,27 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct IGPSignalingGetConfiguration: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPSignalingGetConfiguration"
+public struct IGPSignalingGetConfiguration: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPSignalingGetConfiguration"
 
-  var igpRequest: IGPRequest {
+  public var igpRequest: IGPRequest {
     get {return _storage._igpRequest ?? IGPRequest()}
     set {_uniqueStorage()._igpRequest = newValue}
   }
   /// Returns true if `igpRequest` has been explicitly set.
-  var hasIgpRequest: Bool {return _storage._igpRequest != nil}
+  public var hasIgpRequest: Bool {return _storage._igpRequest != nil}
   /// Clears the value of `igpRequest`. Subsequent reads from it will return its default value.
-  mutating func clearIgpRequest() {_storage._igpRequest = nil}
+  public mutating func clearIgpRequest() {_storage._igpRequest = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -55,7 +55,7 @@ struct IGPSignalingGetConfiguration: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._igpRequest {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -67,63 +67,63 @@ struct IGPSignalingGetConfiguration: SwiftProtobuf.Message {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct IGPSignalingGetConfigurationResponse: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPSignalingGetConfigurationResponse"
+public struct IGPSignalingGetConfigurationResponse: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPSignalingGetConfigurationResponse"
 
-  var igpResponse: IGPResponse {
+  public var igpResponse: IGPResponse {
     get {return _storage._igpResponse ?? IGPResponse()}
     set {_uniqueStorage()._igpResponse = newValue}
   }
   /// Returns true if `igpResponse` has been explicitly set.
-  var hasIgpResponse: Bool {return _storage._igpResponse != nil}
+  public var hasIgpResponse: Bool {return _storage._igpResponse != nil}
   /// Clears the value of `igpResponse`. Subsequent reads from it will return its default value.
-  mutating func clearIgpResponse() {_storage._igpResponse = nil}
+  public mutating func clearIgpResponse() {_storage._igpResponse = nil}
 
-  var igpIceServer: [IGPSignalingGetConfigurationResponse.IGPIceServer] {
+  public var igpIceServer: [IGPSignalingGetConfigurationResponse.IGPIceServer] {
     get {return _storage._igpIceServer}
     set {_uniqueStorage()._igpIceServer = newValue}
   }
 
-  var igpVoiceCalling: Bool {
+  public var igpVoiceCalling: Bool {
     get {return _storage._igpVoiceCalling}
     set {_uniqueStorage()._igpVoiceCalling = newValue}
   }
 
-  var igpVideoCalling: Bool {
+  public var igpVideoCalling: Bool {
     get {return _storage._igpVideoCalling}
     set {_uniqueStorage()._igpVideoCalling = newValue}
   }
 
-  var igpScreenSharing: Bool {
+  public var igpScreenSharing: Bool {
     get {return _storage._igpScreenSharing}
     set {_uniqueStorage()._igpScreenSharing = newValue}
   }
 
-  var igpSecretChat: Bool {
+  public var igpSecretChat: Bool {
     get {return _storage._igpSecretChat}
     set {_uniqueStorage()._igpSecretChat = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  struct IGPIceServer: SwiftProtobuf.Message {
-    static let protoMessageName: String = IGPSignalingGetConfigurationResponse.protoMessageName + ".IGPIceServer"
+  public struct IGPIceServer: SwiftProtobuf.Message {
+    public static let protoMessageName: String = IGPSignalingGetConfigurationResponse.protoMessageName + ".IGPIceServer"
 
-    var igpURL: String = String()
+    public var igpURL: String = String()
 
-    var igpCredential: String = String()
+    public var igpCredential: String = String()
 
-    var igpUsername: String = String()
+    public var igpUsername: String = String()
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
 
     /// Used by the decoding initializers in the SwiftProtobuf library, not generally
     /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
     /// initializers are defined in the SwiftProtobuf library. See the Message and
     /// Message+*Additions` files.
-    mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
       while let fieldNumber = try decoder.nextFieldNumber() {
         switch fieldNumber {
         case 1: try decoder.decodeSingularStringField(value: &self.igpURL)
@@ -138,7 +138,7 @@ struct IGPSignalingGetConfigurationResponse: SwiftProtobuf.Message {
     /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
     /// other serializer methods are defined in the SwiftProtobuf library. See the
     /// `Message` and `Message+*Additions` files.
-    func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
       if !self.igpURL.isEmpty {
         try visitor.visitSingularStringField(value: self.igpURL, fieldNumber: 1)
       }
@@ -152,13 +152,13 @@ struct IGPSignalingGetConfigurationResponse: SwiftProtobuf.Message {
     }
   }
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -179,7 +179,7 @@ struct IGPSignalingGetConfigurationResponse: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._igpResponse {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -209,7 +209,7 @@ struct IGPSignalingGetConfigurationResponse: SwiftProtobuf.Message {
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 extension IGPSignalingGetConfiguration: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_request"),
   ]
 
@@ -232,7 +232,7 @@ extension IGPSignalingGetConfiguration: SwiftProtobuf._MessageImplementationBase
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPSignalingGetConfiguration) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPSignalingGetConfiguration) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -248,7 +248,7 @@ extension IGPSignalingGetConfiguration: SwiftProtobuf._MessageImplementationBase
 }
 
 extension IGPSignalingGetConfigurationResponse: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_response"),
     2: .standard(proto: "IGP_ice_server"),
     3: .standard(proto: "IGP_voice_calling"),
@@ -286,7 +286,7 @@ extension IGPSignalingGetConfigurationResponse: SwiftProtobuf._MessageImplementa
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPSignalingGetConfigurationResponse) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPSignalingGetConfigurationResponse) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -307,13 +307,13 @@ extension IGPSignalingGetConfigurationResponse: SwiftProtobuf._MessageImplementa
 }
 
 extension IGPSignalingGetConfigurationResponse.IGPIceServer: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_url"),
     2: .standard(proto: "IGP_credential"),
     3: .standard(proto: "IGP_username"),
   ]
 
-  func _protobuf_generated_isEqualTo(other: IGPSignalingGetConfigurationResponse.IGPIceServer) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPSignalingGetConfigurationResponse.IGPIceServer) -> Bool {
     if self.igpURL != other.igpURL {return false}
     if self.igpCredential != other.igpCredential {return false}
     if self.igpUsername != other.igpUsername {return false}

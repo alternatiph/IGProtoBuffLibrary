@@ -19,67 +19,67 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct IGPQrCodeNewDevice: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPQrCodeNewDevice"
+public struct IGPQrCodeNewDevice: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPQrCodeNewDevice"
 
-  var igpRequest: IGPRequest {
+  public var igpRequest: IGPRequest {
     get {return _storage._igpRequest ?? IGPRequest()}
     set {_uniqueStorage()._igpRequest = newValue}
   }
   /// Returns true if `igpRequest` has been explicitly set.
-  var hasIgpRequest: Bool {return _storage._igpRequest != nil}
+  public var hasIgpRequest: Bool {return _storage._igpRequest != nil}
   /// Clears the value of `igpRequest`. Subsequent reads from it will return its default value.
-  mutating func clearIgpRequest() {_storage._igpRequest = nil}
+  public mutating func clearIgpRequest() {_storage._igpRequest = nil}
 
-  var igpAppName: String {
+  public var igpAppName: String {
     get {return _storage._igpAppName}
     set {_uniqueStorage()._igpAppName = newValue}
   }
 
-  var igpAppID: Int32 {
+  public var igpAppID: Int32 {
     get {return _storage._igpAppID}
     set {_uniqueStorage()._igpAppID = newValue}
   }
 
-  var igpAppBuildVersion: Int32 {
+  public var igpAppBuildVersion: Int32 {
     get {return _storage._igpAppBuildVersion}
     set {_uniqueStorage()._igpAppBuildVersion = newValue}
   }
 
-  var igpAppVersion: String {
+  public var igpAppVersion: String {
     get {return _storage._igpAppVersion}
     set {_uniqueStorage()._igpAppVersion = newValue}
   }
 
-  var igpPlatform: IGPPlatform {
+  public var igpPlatform: IGPPlatform {
     get {return _storage._igpPlatform}
     set {_uniqueStorage()._igpPlatform = newValue}
   }
 
-  var igpPlatformVersion: String {
+  public var igpPlatformVersion: String {
     get {return _storage._igpPlatformVersion}
     set {_uniqueStorage()._igpPlatformVersion = newValue}
   }
 
-  var igpDevice: IGPDevice {
+  public var igpDevice: IGPDevice {
     get {return _storage._igpDevice}
     set {_uniqueStorage()._igpDevice = newValue}
   }
 
-  var igpDeviceName: String {
+  public var igpDeviceName: String {
     get {return _storage._igpDeviceName}
     set {_uniqueStorage()._igpDeviceName = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -103,7 +103,7 @@ struct IGPQrCodeNewDevice: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._igpRequest {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -139,37 +139,37 @@ struct IGPQrCodeNewDevice: SwiftProtobuf.Message {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct IGPQrCodeNewDeviceResponse: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPQrCodeNewDeviceResponse"
+public struct IGPQrCodeNewDeviceResponse: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPQrCodeNewDeviceResponse"
 
-  var igpResponse: IGPResponse {
+  public var igpResponse: IGPResponse {
     get {return _storage._igpResponse ?? IGPResponse()}
     set {_uniqueStorage()._igpResponse = newValue}
   }
   /// Returns true if `igpResponse` has been explicitly set.
-  var hasIgpResponse: Bool {return _storage._igpResponse != nil}
+  public var hasIgpResponse: Bool {return _storage._igpResponse != nil}
   /// Clears the value of `igpResponse`. Subsequent reads from it will return its default value.
-  mutating func clearIgpResponse() {_storage._igpResponse = nil}
+  public mutating func clearIgpResponse() {_storage._igpResponse = nil}
 
-  var igpQrCodeImage: Data {
+  public var igpQrCodeImage: Data {
     get {return _storage._igpQrCodeImage}
     set {_uniqueStorage()._igpQrCodeImage = newValue}
   }
 
-  var igpExpireTime: Int32 {
+  public var igpExpireTime: Int32 {
     get {return _storage._igpExpireTime}
     set {_uniqueStorage()._igpExpireTime = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -187,7 +187,7 @@ struct IGPQrCodeNewDeviceResponse: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._igpResponse {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -208,7 +208,7 @@ struct IGPQrCodeNewDeviceResponse: SwiftProtobuf.Message {
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 extension IGPQrCodeNewDevice: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_request"),
     2: .standard(proto: "IGP_app_name"),
     3: .standard(proto: "IGP_app_id"),
@@ -255,7 +255,7 @@ extension IGPQrCodeNewDevice: SwiftProtobuf._MessageImplementationBase, SwiftPro
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPQrCodeNewDevice) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPQrCodeNewDevice) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -279,7 +279,7 @@ extension IGPQrCodeNewDevice: SwiftProtobuf._MessageImplementationBase, SwiftPro
 }
 
 extension IGPQrCodeNewDeviceResponse: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_response"),
     2: .standard(proto: "IGP_qr_code_image"),
     3: .standard(proto: "IGP_expire_time"),
@@ -308,7 +308,7 @@ extension IGPQrCodeNewDeviceResponse: SwiftProtobuf._MessageImplementationBase, 
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPQrCodeNewDeviceResponse) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPQrCodeNewDeviceResponse) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0

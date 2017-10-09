@@ -19,32 +19,32 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct IGPPushRateSignalingResponse: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPPushRateSignalingResponse"
+public struct IGPPushRateSignalingResponse: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPPushRateSignalingResponse"
 
-  var igpResponse: IGPResponse {
+  public var igpResponse: IGPResponse {
     get {return _storage._igpResponse ?? IGPResponse()}
     set {_uniqueStorage()._igpResponse = newValue}
   }
   /// Returns true if `igpResponse` has been explicitly set.
-  var hasIgpResponse: Bool {return _storage._igpResponse != nil}
+  public var hasIgpResponse: Bool {return _storage._igpResponse != nil}
   /// Clears the value of `igpResponse`. Subsequent reads from it will return its default value.
-  mutating func clearIgpResponse() {_storage._igpResponse = nil}
+  public mutating func clearIgpResponse() {_storage._igpResponse = nil}
 
-  var igpID: Int64 {
+  public var igpID: Int64 {
     get {return _storage._igpID}
     set {_uniqueStorage()._igpID = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -61,7 +61,7 @@ struct IGPPushRateSignalingResponse: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._igpResponse {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -79,7 +79,7 @@ struct IGPPushRateSignalingResponse: SwiftProtobuf.Message {
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 extension IGPPushRateSignalingResponse: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_response"),
     2: .standard(proto: "IGP_id"),
   ]
@@ -105,7 +105,7 @@ extension IGPPushRateSignalingResponse: SwiftProtobuf._MessageImplementationBase
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPPushRateSignalingResponse) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPPushRateSignalingResponse) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0

@@ -19,36 +19,36 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct IGPSignalingGetLog: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPSignalingGetLog"
+public struct IGPSignalingGetLog: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPSignalingGetLog"
 
-  var igpRequest: IGPRequest {
+  public var igpRequest: IGPRequest {
     get {return _storage._igpRequest ?? IGPRequest()}
     set {_uniqueStorage()._igpRequest = newValue}
   }
   /// Returns true if `igpRequest` has been explicitly set.
-  var hasIgpRequest: Bool {return _storage._igpRequest != nil}
+  public var hasIgpRequest: Bool {return _storage._igpRequest != nil}
   /// Clears the value of `igpRequest`. Subsequent reads from it will return its default value.
-  mutating func clearIgpRequest() {_storage._igpRequest = nil}
+  public mutating func clearIgpRequest() {_storage._igpRequest = nil}
 
-  var igpPagination: IGPPagination {
+  public var igpPagination: IGPPagination {
     get {return _storage._igpPagination ?? IGPPagination()}
     set {_uniqueStorage()._igpPagination = newValue}
   }
   /// Returns true if `igpPagination` has been explicitly set.
-  var hasIgpPagination: Bool {return _storage._igpPagination != nil}
+  public var hasIgpPagination: Bool {return _storage._igpPagination != nil}
   /// Clears the value of `igpPagination`. Subsequent reads from it will return its default value.
-  mutating func clearIgpPagination() {_storage._igpPagination = nil}
+  public mutating func clearIgpPagination() {_storage._igpPagination = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -65,7 +65,7 @@ struct IGPSignalingGetLog: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._igpRequest {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -80,77 +80,77 @@ struct IGPSignalingGetLog: SwiftProtobuf.Message {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct IGPSignalingGetLogResponse: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPSignalingGetLogResponse"
+public struct IGPSignalingGetLogResponse: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPSignalingGetLogResponse"
 
-  var igpResponse: IGPResponse {
+  public var igpResponse: IGPResponse {
     get {return _storage._igpResponse ?? IGPResponse()}
     set {_uniqueStorage()._igpResponse = newValue}
   }
   /// Returns true if `igpResponse` has been explicitly set.
-  var hasIgpResponse: Bool {return _storage._igpResponse != nil}
+  public var hasIgpResponse: Bool {return _storage._igpResponse != nil}
   /// Clears the value of `igpResponse`. Subsequent reads from it will return its default value.
-  mutating func clearIgpResponse() {_storage._igpResponse = nil}
+  public mutating func clearIgpResponse() {_storage._igpResponse = nil}
 
-  var igpSignalingLog: [IGPSignalingGetLogResponse.IGPSignalingLog] {
+  public var igpSignalingLog: [IGPSignalingGetLogResponse.IGPSignalingLog] {
     get {return _storage._igpSignalingLog}
     set {_uniqueStorage()._igpSignalingLog = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  struct IGPSignalingLog: SwiftProtobuf.Message {
-    static let protoMessageName: String = IGPSignalingGetLogResponse.protoMessageName + ".IGPSignalingLog"
+  public struct IGPSignalingLog: SwiftProtobuf.Message {
+    public static let protoMessageName: String = IGPSignalingGetLogResponse.protoMessageName + ".IGPSignalingLog"
 
-    var igpID: Int64 {
+    public var igpID: Int64 {
       get {return _storage._igpID}
       set {_uniqueStorage()._igpID = newValue}
     }
 
-    var igpType: IGPSignalingOffer.IGPType {
+    public var igpType: IGPSignalingOffer.IGPType {
       get {return _storage._igpType}
       set {_uniqueStorage()._igpType = newValue}
     }
 
-    var igpStatus: IGPSignalingGetLogResponse.IGPSignalingLog.IGPStatus {
+    public var igpStatus: IGPSignalingGetLogResponse.IGPSignalingLog.IGPStatus {
       get {return _storage._igpStatus}
       set {_uniqueStorage()._igpStatus = newValue}
     }
 
-    var igpPeer: IGPRegisteredUser {
+    public var igpPeer: IGPRegisteredUser {
       get {return _storage._igpPeer ?? IGPRegisteredUser()}
       set {_uniqueStorage()._igpPeer = newValue}
     }
     /// Returns true if `igpPeer` has been explicitly set.
-    var hasIgpPeer: Bool {return _storage._igpPeer != nil}
+    public var hasIgpPeer: Bool {return _storage._igpPeer != nil}
     /// Clears the value of `igpPeer`. Subsequent reads from it will return its default value.
-    mutating func clearIgpPeer() {_storage._igpPeer = nil}
+    public mutating func clearIgpPeer() {_storage._igpPeer = nil}
 
-    var igpOfferTime: Int32 {
+    public var igpOfferTime: Int32 {
       get {return _storage._igpOfferTime}
       set {_uniqueStorage()._igpOfferTime = newValue}
     }
 
-    var igpDuration: Int32 {
+    public var igpDuration: Int32 {
       get {return _storage._igpDuration}
       set {_uniqueStorage()._igpDuration = newValue}
     }
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    enum IGPStatus: SwiftProtobuf.Enum {
-      typealias RawValue = Int
+    public enum IGPStatus: SwiftProtobuf.Enum {
+      public typealias RawValue = Int
       case missed // = 0
       case canceled // = 1
       case incoming // = 2
       case outgoing // = 3
       case UNRECOGNIZED(Int)
 
-      init() {
+      public init() {
         self = .missed
       }
 
-      init?(rawValue: Int) {
+      public init?(rawValue: Int) {
         switch rawValue {
         case 0: self = .missed
         case 1: self = .canceled
@@ -160,7 +160,7 @@ struct IGPSignalingGetLogResponse: SwiftProtobuf.Message {
         }
       }
 
-      var rawValue: Int {
+      public var rawValue: Int {
         switch self {
         case .missed: return 0
         case .canceled: return 1
@@ -172,13 +172,13 @@ struct IGPSignalingGetLogResponse: SwiftProtobuf.Message {
 
     }
 
-    init() {}
+    public init() {}
 
     /// Used by the decoding initializers in the SwiftProtobuf library, not generally
     /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
     /// initializers are defined in the SwiftProtobuf library. See the Message and
     /// Message+*Additions` files.
-    mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
       _ = _uniqueStorage()
       try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
         while let fieldNumber = try decoder.nextFieldNumber() {
@@ -199,7 +199,7 @@ struct IGPSignalingGetLogResponse: SwiftProtobuf.Message {
     /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
     /// other serializer methods are defined in the SwiftProtobuf library. See the
     /// `Message` and `Message+*Additions` files.
-    func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
       try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
         if _storage._igpID != 0 {
           try visitor.visitSingularInt64Field(value: _storage._igpID, fieldNumber: 1)
@@ -226,13 +226,13 @@ struct IGPSignalingGetLogResponse: SwiftProtobuf.Message {
     fileprivate var _storage = _StorageClass.defaultInstance
   }
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -249,7 +249,7 @@ struct IGPSignalingGetLogResponse: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._igpResponse {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -267,7 +267,7 @@ struct IGPSignalingGetLogResponse: SwiftProtobuf.Message {
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 extension IGPSignalingGetLog: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_request"),
     2: .standard(proto: "IGP_pagination"),
   ]
@@ -293,7 +293,7 @@ extension IGPSignalingGetLog: SwiftProtobuf._MessageImplementationBase, SwiftPro
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPSignalingGetLog) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPSignalingGetLog) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -310,7 +310,7 @@ extension IGPSignalingGetLog: SwiftProtobuf._MessageImplementationBase, SwiftPro
 }
 
 extension IGPSignalingGetLogResponse: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_response"),
     2: .standard(proto: "IGP_signaling_log"),
   ]
@@ -336,7 +336,7 @@ extension IGPSignalingGetLogResponse: SwiftProtobuf._MessageImplementationBase, 
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPSignalingGetLogResponse) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPSignalingGetLogResponse) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -353,7 +353,7 @@ extension IGPSignalingGetLogResponse: SwiftProtobuf._MessageImplementationBase, 
 }
 
 extension IGPSignalingGetLogResponse.IGPSignalingLog: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_id"),
     2: .standard(proto: "IGP_type"),
     3: .standard(proto: "IGP_status"),
@@ -391,7 +391,7 @@ extension IGPSignalingGetLogResponse.IGPSignalingLog: SwiftProtobuf._MessageImpl
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPSignalingGetLogResponse.IGPSignalingLog) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPSignalingGetLogResponse.IGPSignalingLog) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -412,7 +412,7 @@ extension IGPSignalingGetLogResponse.IGPSignalingLog: SwiftProtobuf._MessageImpl
 }
 
 extension IGPSignalingGetLogResponse.IGPSignalingLog.IGPStatus: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "MISSED"),
     1: .same(proto: "CANCELED"),
     2: .same(proto: "INCOMING"),

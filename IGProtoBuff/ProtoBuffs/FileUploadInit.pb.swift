@@ -19,52 +19,52 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct IGPFileUploadInit: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPFileUploadInit"
+public struct IGPFileUploadInit: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPFileUploadInit"
 
-  var igpRequest: IGPRequest {
+  public var igpRequest: IGPRequest {
     get {return _storage._igpRequest ?? IGPRequest()}
     set {_uniqueStorage()._igpRequest = newValue}
   }
   /// Returns true if `igpRequest` has been explicitly set.
-  var hasIgpRequest: Bool {return _storage._igpRequest != nil}
+  public var hasIgpRequest: Bool {return _storage._igpRequest != nil}
   /// Clears the value of `igpRequest`. Subsequent reads from it will return its default value.
-  mutating func clearIgpRequest() {_storage._igpRequest = nil}
+  public mutating func clearIgpRequest() {_storage._igpRequest = nil}
 
-  var igpFirstBytes: Data {
+  public var igpFirstBytes: Data {
     get {return _storage._igpFirstBytes}
     set {_uniqueStorage()._igpFirstBytes = newValue}
   }
 
-  var igpLastBytes: Data {
+  public var igpLastBytes: Data {
     get {return _storage._igpLastBytes}
     set {_uniqueStorage()._igpLastBytes = newValue}
   }
 
-  var igpSize: Int64 {
+  public var igpSize: Int64 {
     get {return _storage._igpSize}
     set {_uniqueStorage()._igpSize = newValue}
   }
 
-  var igpFileHash: Data {
+  public var igpFileHash: Data {
     get {return _storage._igpFileHash}
     set {_uniqueStorage()._igpFileHash = newValue}
   }
 
-  var igpFileName: String {
+  public var igpFileName: String {
     get {return _storage._igpFileName}
     set {_uniqueStorage()._igpFileName = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -85,7 +85,7 @@ struct IGPFileUploadInit: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._igpRequest {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -112,47 +112,47 @@ struct IGPFileUploadInit: SwiftProtobuf.Message {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct IGPFileUploadInitResponse: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPFileUploadInitResponse"
+public struct IGPFileUploadInitResponse: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPFileUploadInitResponse"
 
-  var igpResponse: IGPResponse {
+  public var igpResponse: IGPResponse {
     get {return _storage._igpResponse ?? IGPResponse()}
     set {_uniqueStorage()._igpResponse = newValue}
   }
   /// Returns true if `igpResponse` has been explicitly set.
-  var hasIgpResponse: Bool {return _storage._igpResponse != nil}
+  public var hasIgpResponse: Bool {return _storage._igpResponse != nil}
   /// Clears the value of `igpResponse`. Subsequent reads from it will return its default value.
-  mutating func clearIgpResponse() {_storage._igpResponse = nil}
+  public mutating func clearIgpResponse() {_storage._igpResponse = nil}
 
-  var igpToken: String {
+  public var igpToken: String {
     get {return _storage._igpToken}
     set {_uniqueStorage()._igpToken = newValue}
   }
 
-  var igpProgress: Double {
+  public var igpProgress: Double {
     get {return _storage._igpProgress}
     set {_uniqueStorage()._igpProgress = newValue}
   }
 
-  var igpOffset: Int64 {
+  public var igpOffset: Int64 {
     get {return _storage._igpOffset}
     set {_uniqueStorage()._igpOffset = newValue}
   }
 
-  var igpLimit: Int32 {
+  public var igpLimit: Int32 {
     get {return _storage._igpLimit}
     set {_uniqueStorage()._igpLimit = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -172,7 +172,7 @@ struct IGPFileUploadInitResponse: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._igpResponse {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -199,7 +199,7 @@ struct IGPFileUploadInitResponse: SwiftProtobuf.Message {
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 extension IGPFileUploadInit: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_request"),
     2: .standard(proto: "IGP_first_bytes"),
     3: .standard(proto: "IGP_last_bytes"),
@@ -237,7 +237,7 @@ extension IGPFileUploadInit: SwiftProtobuf._MessageImplementationBase, SwiftProt
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPFileUploadInit) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPFileUploadInit) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -258,7 +258,7 @@ extension IGPFileUploadInit: SwiftProtobuf._MessageImplementationBase, SwiftProt
 }
 
 extension IGPFileUploadInitResponse: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_response"),
     2: .standard(proto: "IGP_token"),
     3: .standard(proto: "IGP_progress"),
@@ -293,7 +293,7 @@ extension IGPFileUploadInitResponse: SwiftProtobuf._MessageImplementationBase, S
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPFileUploadInitResponse) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPFileUploadInitResponse) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0

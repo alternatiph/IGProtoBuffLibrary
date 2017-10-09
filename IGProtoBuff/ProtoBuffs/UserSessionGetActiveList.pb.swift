@@ -19,27 +19,27 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct IGPUserSessionGetActiveList: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPUserSessionGetActiveList"
+public struct IGPUserSessionGetActiveList: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPUserSessionGetActiveList"
 
-  var igpRequest: IGPRequest {
+  public var igpRequest: IGPRequest {
     get {return _storage._igpRequest ?? IGPRequest()}
     set {_uniqueStorage()._igpRequest = newValue}
   }
   /// Returns true if `igpRequest` has been explicitly set.
-  var hasIgpRequest: Bool {return _storage._igpRequest != nil}
+  public var hasIgpRequest: Bool {return _storage._igpRequest != nil}
   /// Clears the value of `igpRequest`. Subsequent reads from it will return its default value.
-  mutating func clearIgpRequest() {_storage._igpRequest = nil}
+  public mutating func clearIgpRequest() {_storage._igpRequest = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -55,7 +55,7 @@ struct IGPUserSessionGetActiveList: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._igpRequest {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -67,67 +67,67 @@ struct IGPUserSessionGetActiveList: SwiftProtobuf.Message {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct IGPUserSessionGetActiveListResponse: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPUserSessionGetActiveListResponse"
+public struct IGPUserSessionGetActiveListResponse: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPUserSessionGetActiveListResponse"
 
-  var igpResponse: IGPResponse {
+  public var igpResponse: IGPResponse {
     get {return _storage._igpResponse ?? IGPResponse()}
     set {_uniqueStorage()._igpResponse = newValue}
   }
   /// Returns true if `igpResponse` has been explicitly set.
-  var hasIgpResponse: Bool {return _storage._igpResponse != nil}
+  public var hasIgpResponse: Bool {return _storage._igpResponse != nil}
   /// Clears the value of `igpResponse`. Subsequent reads from it will return its default value.
-  mutating func clearIgpResponse() {_storage._igpResponse = nil}
+  public mutating func clearIgpResponse() {_storage._igpResponse = nil}
 
-  var igpSession: [IGPUserSessionGetActiveListResponse.IGPSession] {
+  public var igpSession: [IGPUserSessionGetActiveListResponse.IGPSession] {
     get {return _storage._igpSession}
     set {_uniqueStorage()._igpSession = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  struct IGPSession: SwiftProtobuf.Message {
-    static let protoMessageName: String = IGPUserSessionGetActiveListResponse.protoMessageName + ".IGPSession"
+  public struct IGPSession: SwiftProtobuf.Message {
+    public static let protoMessageName: String = IGPUserSessionGetActiveListResponse.protoMessageName + ".IGPSession"
 
-    var igpSessionID: Int64 = 0
+    public var igpSessionID: Int64 = 0
 
-    var igpAppName: String = String()
+    public var igpAppName: String = String()
 
-    var igpAppID: Int32 = 0
+    public var igpAppID: Int32 = 0
 
-    var igpAppBuildVersion: Int32 = 0
+    public var igpAppBuildVersion: Int32 = 0
 
-    var igpAppVersion: String = String()
+    public var igpAppVersion: String = String()
 
-    var igpPlatform: IGPPlatform = .unknownPlatform
+    public var igpPlatform: IGPPlatform = .unknownPlatform
 
-    var igpPlatformVersion: String = String()
+    public var igpPlatformVersion: String = String()
 
-    var igpDevice: IGPDevice = .unknownDevice
+    public var igpDevice: IGPDevice = .unknownDevice
 
-    var igpDeviceName: String = String()
+    public var igpDeviceName: String = String()
 
-    var igpLanguage: IGPLanguage = .enUs
+    public var igpLanguage: IGPLanguage = .enUs
 
-    var igpCountry: String = String()
+    public var igpCountry: String = String()
 
-    var igpCurrent: Bool = false
+    public var igpCurrent: Bool = false
 
-    var igpCreateTime: Int32 = 0
+    public var igpCreateTime: Int32 = 0
 
-    var igpActiveTime: Int32 = 0
+    public var igpActiveTime: Int32 = 0
 
-    var igpIp: String = String()
+    public var igpIp: String = String()
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
 
     /// Used by the decoding initializers in the SwiftProtobuf library, not generally
     /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
     /// initializers are defined in the SwiftProtobuf library. See the Message and
     /// Message+*Additions` files.
-    mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
       while let fieldNumber = try decoder.nextFieldNumber() {
         switch fieldNumber {
         case 1: try decoder.decodeSingularInt64Field(value: &self.igpSessionID)
@@ -154,7 +154,7 @@ struct IGPUserSessionGetActiveListResponse: SwiftProtobuf.Message {
     /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
     /// other serializer methods are defined in the SwiftProtobuf library. See the
     /// `Message` and `Message+*Additions` files.
-    func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
       if self.igpSessionID != 0 {
         try visitor.visitSingularInt64Field(value: self.igpSessionID, fieldNumber: 1)
       }
@@ -204,13 +204,13 @@ struct IGPUserSessionGetActiveListResponse: SwiftProtobuf.Message {
     }
   }
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -227,7 +227,7 @@ struct IGPUserSessionGetActiveListResponse: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._igpResponse {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -245,7 +245,7 @@ struct IGPUserSessionGetActiveListResponse: SwiftProtobuf.Message {
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 extension IGPUserSessionGetActiveList: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_request"),
   ]
 
@@ -268,7 +268,7 @@ extension IGPUserSessionGetActiveList: SwiftProtobuf._MessageImplementationBase,
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPUserSessionGetActiveList) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPUserSessionGetActiveList) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -284,7 +284,7 @@ extension IGPUserSessionGetActiveList: SwiftProtobuf._MessageImplementationBase,
 }
 
 extension IGPUserSessionGetActiveListResponse: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_response"),
     2: .standard(proto: "IGP_session"),
   ]
@@ -310,7 +310,7 @@ extension IGPUserSessionGetActiveListResponse: SwiftProtobuf._MessageImplementat
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPUserSessionGetActiveListResponse) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPUserSessionGetActiveListResponse) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -327,7 +327,7 @@ extension IGPUserSessionGetActiveListResponse: SwiftProtobuf._MessageImplementat
 }
 
 extension IGPUserSessionGetActiveListResponse.IGPSession: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_session_id"),
     2: .standard(proto: "IGP_app_name"),
     3: .standard(proto: "IGP_app_id"),
@@ -345,7 +345,7 @@ extension IGPUserSessionGetActiveListResponse.IGPSession: SwiftProtobuf._Message
     15: .standard(proto: "IGP_ip"),
   ]
 
-  func _protobuf_generated_isEqualTo(other: IGPUserSessionGetActiveListResponse.IGPSession) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPUserSessionGetActiveListResponse.IGPSession) -> Bool {
     if self.igpSessionID != other.igpSessionID {return false}
     if self.igpAppName != other.igpAppName {return false}
     if self.igpAppID != other.igpAppID {return false}

@@ -19,37 +19,37 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct IGPGroupCheckUsername: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPGroupCheckUsername"
+public struct IGPGroupCheckUsername: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPGroupCheckUsername"
 
-  var igpRequest: IGPRequest {
+  public var igpRequest: IGPRequest {
     get {return _storage._igpRequest ?? IGPRequest()}
     set {_uniqueStorage()._igpRequest = newValue}
   }
   /// Returns true if `igpRequest` has been explicitly set.
-  var hasIgpRequest: Bool {return _storage._igpRequest != nil}
+  public var hasIgpRequest: Bool {return _storage._igpRequest != nil}
   /// Clears the value of `igpRequest`. Subsequent reads from it will return its default value.
-  mutating func clearIgpRequest() {_storage._igpRequest = nil}
+  public mutating func clearIgpRequest() {_storage._igpRequest = nil}
 
-  var igpUsername: String {
+  public var igpUsername: String {
     get {return _storage._igpUsername}
     set {_uniqueStorage()._igpUsername = newValue}
   }
 
-  var igpRoomID: Int64 {
+  public var igpRoomID: Int64 {
     get {return _storage._igpRoomID}
     set {_uniqueStorage()._igpRoomID = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -67,7 +67,7 @@ struct IGPGroupCheckUsername: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._igpRequest {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -85,38 +85,38 @@ struct IGPGroupCheckUsername: SwiftProtobuf.Message {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct IGPGroupCheckUsernameResponse: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPGroupCheckUsernameResponse"
+public struct IGPGroupCheckUsernameResponse: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPGroupCheckUsernameResponse"
 
-  var igpResponse: IGPResponse {
+  public var igpResponse: IGPResponse {
     get {return _storage._igpResponse ?? IGPResponse()}
     set {_uniqueStorage()._igpResponse = newValue}
   }
   /// Returns true if `igpResponse` has been explicitly set.
-  var hasIgpResponse: Bool {return _storage._igpResponse != nil}
+  public var hasIgpResponse: Bool {return _storage._igpResponse != nil}
   /// Clears the value of `igpResponse`. Subsequent reads from it will return its default value.
-  mutating func clearIgpResponse() {_storage._igpResponse = nil}
+  public mutating func clearIgpResponse() {_storage._igpResponse = nil}
 
-  var igpStatus: IGPGroupCheckUsernameResponse.IGPStatus {
+  public var igpStatus: IGPGroupCheckUsernameResponse.IGPStatus {
     get {return _storage._igpStatus}
     set {_uniqueStorage()._igpStatus = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  enum IGPStatus: SwiftProtobuf.Enum {
-    typealias RawValue = Int
+  public enum IGPStatus: SwiftProtobuf.Enum {
+    public typealias RawValue = Int
     case invalid // = 0
     case taken // = 1
     case available // = 2
     case occupyingLimitExceeded // = 3
     case UNRECOGNIZED(Int)
 
-    init() {
+    public init() {
       self = .invalid
     }
 
-    init?(rawValue: Int) {
+    public init?(rawValue: Int) {
       switch rawValue {
       case 0: self = .invalid
       case 1: self = .taken
@@ -126,7 +126,7 @@ struct IGPGroupCheckUsernameResponse: SwiftProtobuf.Message {
       }
     }
 
-    var rawValue: Int {
+    public var rawValue: Int {
       switch self {
       case .invalid: return 0
       case .taken: return 1
@@ -138,13 +138,13 @@ struct IGPGroupCheckUsernameResponse: SwiftProtobuf.Message {
 
   }
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -161,7 +161,7 @@ struct IGPGroupCheckUsernameResponse: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._igpResponse {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -179,7 +179,7 @@ struct IGPGroupCheckUsernameResponse: SwiftProtobuf.Message {
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 extension IGPGroupCheckUsername: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_request"),
     2: .standard(proto: "IGP_username"),
     3: .standard(proto: "IGP_room_id"),
@@ -208,7 +208,7 @@ extension IGPGroupCheckUsername: SwiftProtobuf._MessageImplementationBase, Swift
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPGroupCheckUsername) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPGroupCheckUsername) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -226,7 +226,7 @@ extension IGPGroupCheckUsername: SwiftProtobuf._MessageImplementationBase, Swift
 }
 
 extension IGPGroupCheckUsernameResponse: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_response"),
     2: .standard(proto: "IGP_status"),
   ]
@@ -252,7 +252,7 @@ extension IGPGroupCheckUsernameResponse: SwiftProtobuf._MessageImplementationBas
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPGroupCheckUsernameResponse) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPGroupCheckUsernameResponse) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -269,7 +269,7 @@ extension IGPGroupCheckUsernameResponse: SwiftProtobuf._MessageImplementationBas
 }
 
 extension IGPGroupCheckUsernameResponse.IGPStatus: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "INVALID"),
     1: .same(proto: "TAKEN"),
     2: .same(proto: "AVAILABLE"),

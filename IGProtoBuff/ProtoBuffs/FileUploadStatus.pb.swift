@@ -19,32 +19,32 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct IGPFileUploadStatus: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPFileUploadStatus"
+public struct IGPFileUploadStatus: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPFileUploadStatus"
 
-  var igpRequest: IGPRequest {
+  public var igpRequest: IGPRequest {
     get {return _storage._igpRequest ?? IGPRequest()}
     set {_uniqueStorage()._igpRequest = newValue}
   }
   /// Returns true if `igpRequest` has been explicitly set.
-  var hasIgpRequest: Bool {return _storage._igpRequest != nil}
+  public var hasIgpRequest: Bool {return _storage._igpRequest != nil}
   /// Clears the value of `igpRequest`. Subsequent reads from it will return its default value.
-  mutating func clearIgpRequest() {_storage._igpRequest = nil}
+  public mutating func clearIgpRequest() {_storage._igpRequest = nil}
 
-  var igpToken: String {
+  public var igpToken: String {
     get {return _storage._igpToken}
     set {_uniqueStorage()._igpToken = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -61,7 +61,7 @@ struct IGPFileUploadStatus: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._igpRequest {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -76,48 +76,48 @@ struct IGPFileUploadStatus: SwiftProtobuf.Message {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct IGPFileUploadStatusResponse: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPFileUploadStatusResponse"
+public struct IGPFileUploadStatusResponse: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPFileUploadStatusResponse"
 
-  var igpResponse: IGPResponse {
+  public var igpResponse: IGPResponse {
     get {return _storage._igpResponse ?? IGPResponse()}
     set {_uniqueStorage()._igpResponse = newValue}
   }
   /// Returns true if `igpResponse` has been explicitly set.
-  var hasIgpResponse: Bool {return _storage._igpResponse != nil}
+  public var hasIgpResponse: Bool {return _storage._igpResponse != nil}
   /// Clears the value of `igpResponse`. Subsequent reads from it will return its default value.
-  mutating func clearIgpResponse() {_storage._igpResponse = nil}
+  public mutating func clearIgpResponse() {_storage._igpResponse = nil}
 
-  var igpStatus: IGPFileUploadStatusResponse.IGPStatus {
+  public var igpStatus: IGPFileUploadStatusResponse.IGPStatus {
     get {return _storage._igpStatus}
     set {_uniqueStorage()._igpStatus = newValue}
   }
 
-  var igpProgress: Double {
+  public var igpProgress: Double {
     get {return _storage._igpProgress}
     set {_uniqueStorage()._igpProgress = newValue}
   }
 
-  var igpRecheckDelayMs: Int32 {
+  public var igpRecheckDelayMs: Int32 {
     get {return _storage._igpRecheckDelayMs}
     set {_uniqueStorage()._igpRecheckDelayMs = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  enum IGPStatus: SwiftProtobuf.Enum {
-    typealias RawValue = Int
+  public enum IGPStatus: SwiftProtobuf.Enum {
+    public typealias RawValue = Int
     case uploading // = 0
     case processing // = 1
     case processed // = 2
     case corrupted // = 3
     case UNRECOGNIZED(Int)
 
-    init() {
+    public init() {
       self = .uploading
     }
 
-    init?(rawValue: Int) {
+    public init?(rawValue: Int) {
       switch rawValue {
       case 0: self = .uploading
       case 1: self = .processing
@@ -127,7 +127,7 @@ struct IGPFileUploadStatusResponse: SwiftProtobuf.Message {
       }
     }
 
-    var rawValue: Int {
+    public var rawValue: Int {
       switch self {
       case .uploading: return 0
       case .processing: return 1
@@ -139,13 +139,13 @@ struct IGPFileUploadStatusResponse: SwiftProtobuf.Message {
 
   }
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -164,7 +164,7 @@ struct IGPFileUploadStatusResponse: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._igpResponse {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -188,7 +188,7 @@ struct IGPFileUploadStatusResponse: SwiftProtobuf.Message {
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 extension IGPFileUploadStatus: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_request"),
     2: .standard(proto: "IGP_token"),
   ]
@@ -214,7 +214,7 @@ extension IGPFileUploadStatus: SwiftProtobuf._MessageImplementationBase, SwiftPr
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPFileUploadStatus) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPFileUploadStatus) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -231,7 +231,7 @@ extension IGPFileUploadStatus: SwiftProtobuf._MessageImplementationBase, SwiftPr
 }
 
 extension IGPFileUploadStatusResponse: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_response"),
     2: .standard(proto: "IGP_status"),
     3: .standard(proto: "IGP_progress"),
@@ -263,7 +263,7 @@ extension IGPFileUploadStatusResponse: SwiftProtobuf._MessageImplementationBase,
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPFileUploadStatusResponse) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPFileUploadStatusResponse) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -282,7 +282,7 @@ extension IGPFileUploadStatusResponse: SwiftProtobuf._MessageImplementationBase,
 }
 
 extension IGPFileUploadStatusResponse.IGPStatus: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "UPLOADING"),
     1: .same(proto: "PROCESSING"),
     2: .same(proto: "PROCESSED"),

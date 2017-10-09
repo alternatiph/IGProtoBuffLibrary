@@ -19,18 +19,18 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-enum IGPGender: SwiftProtobuf.Enum {
-  typealias RawValue = Int
+public enum IGPGender: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
   case unknown // = 0
   case male // = 1
   case female // = 2
   case UNRECOGNIZED(Int)
 
-  init() {
+  public init() {
     self = .unknown
   }
 
-  init?(rawValue: Int) {
+  public init?(rawValue: Int) {
     switch rawValue {
     case 0: self = .unknown
     case 1: self = .male
@@ -39,7 +39,7 @@ enum IGPGender: SwiftProtobuf.Enum {
     }
   }
 
-  var rawValue: Int {
+  public var rawValue: Int {
     switch self {
     case .unknown: return 0
     case .male: return 1
@@ -50,19 +50,19 @@ enum IGPGender: SwiftProtobuf.Enum {
 
 }
 
-enum IGPDevice: SwiftProtobuf.Enum {
-  typealias RawValue = Int
+public enum IGPDevice: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
   case unknownDevice // = 0
   case pc // = 1
   case tablet // = 2
   case mobile // = 3
   case UNRECOGNIZED(Int)
 
-  init() {
+  public init() {
     self = .unknownDevice
   }
 
-  init?(rawValue: Int) {
+  public init?(rawValue: Int) {
     switch rawValue {
     case 0: self = .unknownDevice
     case 1: self = .pc
@@ -72,7 +72,7 @@ enum IGPDevice: SwiftProtobuf.Enum {
     }
   }
 
-  var rawValue: Int {
+  public var rawValue: Int {
     switch self {
     case .unknownDevice: return 0
     case .pc: return 1
@@ -84,8 +84,8 @@ enum IGPDevice: SwiftProtobuf.Enum {
 
 }
 
-enum IGPPlatform: SwiftProtobuf.Enum {
-  typealias RawValue = Int
+public enum IGPPlatform: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
   case unknownPlatform // = 0
   case android // = 1
   case ios // = 2
@@ -95,11 +95,11 @@ enum IGPPlatform: SwiftProtobuf.Enum {
   case blackBerry // = 6
   case UNRECOGNIZED(Int)
 
-  init() {
+  public init() {
     self = .unknownPlatform
   }
 
-  init?(rawValue: Int) {
+  public init?(rawValue: Int) {
     switch rawValue {
     case 0: self = .unknownPlatform
     case 1: self = .android
@@ -112,7 +112,7 @@ enum IGPPlatform: SwiftProtobuf.Enum {
     }
   }
 
-  var rawValue: Int {
+  public var rawValue: Int {
     switch self {
     case .unknownPlatform: return 0
     case .android: return 1
@@ -127,17 +127,17 @@ enum IGPPlatform: SwiftProtobuf.Enum {
 
 }
 
-enum IGPLanguage: SwiftProtobuf.Enum {
-  typealias RawValue = Int
+public enum IGPLanguage: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
   case enUs // = 0
   case faIr // = 1
   case UNRECOGNIZED(Int)
 
-  init() {
+  public init() {
     self = .enUs
   }
 
-  init?(rawValue: Int) {
+  public init?(rawValue: Int) {
     switch rawValue {
     case 0: self = .enUs
     case 1: self = .faIr
@@ -145,7 +145,7 @@ enum IGPLanguage: SwiftProtobuf.Enum {
     }
   }
 
-  var rawValue: Int {
+  public var rawValue: Int {
     switch self {
     case .enUs: return 0
     case .faIr: return 1
@@ -155,8 +155,8 @@ enum IGPLanguage: SwiftProtobuf.Enum {
 
 }
 
-enum IGPRoomMessageType: SwiftProtobuf.Enum {
-  typealias RawValue = Int
+public enum IGPRoomMessageType: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
   case text // = 0
   case image // = 1
   case imageText // = 2
@@ -174,11 +174,11 @@ enum IGPRoomMessageType: SwiftProtobuf.Enum {
   case contact // = 13
   case UNRECOGNIZED(Int)
 
-  init() {
+  public init() {
     self = .text
   }
 
-  init?(rawValue: Int) {
+  public init?(rawValue: Int) {
     switch rawValue {
     case 0: self = .text
     case 1: self = .image
@@ -199,7 +199,7 @@ enum IGPRoomMessageType: SwiftProtobuf.Enum {
     }
   }
 
-  var rawValue: Int {
+  public var rawValue: Int {
     switch self {
     case .text: return 0
     case .image: return 1
@@ -222,8 +222,8 @@ enum IGPRoomMessageType: SwiftProtobuf.Enum {
 
 }
 
-enum IGPRoomMessageStatus: SwiftProtobuf.Enum {
-  typealias RawValue = Int
+public enum IGPRoomMessageStatus: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
   case failed // = 0
   case sending // = 1
   case sent // = 2
@@ -232,11 +232,11 @@ enum IGPRoomMessageStatus: SwiftProtobuf.Enum {
   case listened // = 5
   case UNRECOGNIZED(Int)
 
-  init() {
+  public init() {
     self = .failed
   }
 
-  init?(rawValue: Int) {
+  public init?(rawValue: Int) {
     switch rawValue {
     case 0: self = .failed
     case 1: self = .sending
@@ -248,7 +248,7 @@ enum IGPRoomMessageStatus: SwiftProtobuf.Enum {
     }
   }
 
-  var rawValue: Int {
+  public var rawValue: Int {
     switch self {
     case .failed: return 0
     case .sending: return 1
@@ -262,17 +262,17 @@ enum IGPRoomMessageStatus: SwiftProtobuf.Enum {
 
 }
 
-enum IGPRoomMessageReaction: SwiftProtobuf.Enum {
-  typealias RawValue = Int
+public enum IGPRoomMessageReaction: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
   case thumbsUp // = 0
   case thumbsDown // = 1
   case UNRECOGNIZED(Int)
 
-  init() {
+  public init() {
     self = .thumbsUp
   }
 
-  init?(rawValue: Int) {
+  public init?(rawValue: Int) {
     switch rawValue {
     case 0: self = .thumbsUp
     case 1: self = .thumbsDown
@@ -280,7 +280,7 @@ enum IGPRoomMessageReaction: SwiftProtobuf.Enum {
     }
   }
 
-  var rawValue: Int {
+  public var rawValue: Int {
     switch self {
     case .thumbsUp: return 0
     case .thumbsDown: return 1
@@ -290,8 +290,8 @@ enum IGPRoomMessageReaction: SwiftProtobuf.Enum {
 
 }
 
-enum IGPClientAction: SwiftProtobuf.Enum {
-  typealias RawValue = Int
+public enum IGPClientAction: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
   case cancel // = 0
   case typing // = 1
   case sendingImage // = 2
@@ -309,11 +309,11 @@ enum IGPClientAction: SwiftProtobuf.Enum {
   case painting // = 14
   case UNRECOGNIZED(Int)
 
-  init() {
+  public init() {
     self = .cancel
   }
 
-  init?(rawValue: Int) {
+  public init?(rawValue: Int) {
     switch rawValue {
     case 0: self = .cancel
     case 1: self = .typing
@@ -334,7 +334,7 @@ enum IGPClientAction: SwiftProtobuf.Enum {
     }
   }
 
-  var rawValue: Int {
+  public var rawValue: Int {
     switch self {
     case .cancel: return 0
     case .typing: return 1
@@ -357,8 +357,8 @@ enum IGPClientAction: SwiftProtobuf.Enum {
 
 }
 
-enum IGPPrivacyType: SwiftProtobuf.Enum {
-  typealias RawValue = Int
+public enum IGPPrivacyType: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
   case userStatus // = 0
   case avatar // = 1
   case groupInvite // = 2
@@ -369,11 +369,11 @@ enum IGPPrivacyType: SwiftProtobuf.Enum {
   case secretChat // = 7
   case UNRECOGNIZED(Int)
 
-  init() {
+  public init() {
     self = .userStatus
   }
 
-  init?(rawValue: Int) {
+  public init?(rawValue: Int) {
     switch rawValue {
     case 0: self = .userStatus
     case 1: self = .avatar
@@ -387,7 +387,7 @@ enum IGPPrivacyType: SwiftProtobuf.Enum {
     }
   }
 
-  var rawValue: Int {
+  public var rawValue: Int {
     switch self {
     case .userStatus: return 0
     case .avatar: return 1
@@ -403,18 +403,18 @@ enum IGPPrivacyType: SwiftProtobuf.Enum {
 
 }
 
-enum IGPPrivacyLevel: SwiftProtobuf.Enum {
-  typealias RawValue = Int
+public enum IGPPrivacyLevel: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
   case allowAll // = 0
   case denyAll // = 1
   case allowContacts // = 2
   case UNRECOGNIZED(Int)
 
-  init() {
+  public init() {
     self = .allowAll
   }
 
-  init?(rawValue: Int) {
+  public init?(rawValue: Int) {
     switch rawValue {
     case 0: self = .allowAll
     case 1: self = .denyAll
@@ -423,7 +423,7 @@ enum IGPPrivacyLevel: SwiftProtobuf.Enum {
     }
   }
 
-  var rawValue: Int {
+  public var rawValue: Int {
     switch self {
     case .allowAll: return 0
     case .denyAll: return 1
@@ -434,22 +434,22 @@ enum IGPPrivacyLevel: SwiftProtobuf.Enum {
 
 }
 
-struct IGPRoomMessageLocation: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPRoomMessageLocation"
+public struct IGPRoomMessageLocation: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPRoomMessageLocation"
 
-  var igpLat: Double = 0
+  public var igpLat: Double = 0
 
-  var igpLon: Double = 0
+  public var igpLon: Double = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       switch fieldNumber {
       case 1: try decoder.decodeSingularDoubleField(value: &self.igpLat)
@@ -463,7 +463,7 @@ struct IGPRoomMessageLocation: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.igpLat != 0 {
       try visitor.visitSingularDoubleField(value: self.igpLat, fieldNumber: 1)
     }
@@ -474,32 +474,32 @@ struct IGPRoomMessageLocation: SwiftProtobuf.Message {
   }
 }
 
-struct IGPRoomMessageLog: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPRoomMessageLog"
+public struct IGPRoomMessageLog: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPRoomMessageLog"
 
-  var igpType: IGPRoomMessageLog.IGPType {
+  public var igpType: IGPRoomMessageLog.IGPType {
     get {return _storage._igpType}
     set {_uniqueStorage()._igpType = newValue}
   }
 
-  var igpExtraType: IGPRoomMessageLog.IGPExtraType {
+  public var igpExtraType: IGPRoomMessageLog.IGPExtraType {
     get {return _storage._igpExtraType}
     set {_uniqueStorage()._igpExtraType = newValue}
   }
 
-  var igpTargetUser: IGPRoomMessageLog.IGPTargetUser {
+  public var igpTargetUser: IGPRoomMessageLog.IGPTargetUser {
     get {return _storage._igpTargetUser ?? IGPRoomMessageLog.IGPTargetUser()}
     set {_uniqueStorage()._igpTargetUser = newValue}
   }
   /// Returns true if `igpTargetUser` has been explicitly set.
-  var hasIgpTargetUser: Bool {return _storage._igpTargetUser != nil}
+  public var hasIgpTargetUser: Bool {return _storage._igpTargetUser != nil}
   /// Clears the value of `igpTargetUser`. Subsequent reads from it will return its default value.
-  mutating func clearIgpTargetUser() {_storage._igpTargetUser = nil}
+  public mutating func clearIgpTargetUser() {_storage._igpTargetUser = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  enum IGPType: SwiftProtobuf.Enum {
-    typealias RawValue = Int
+  public enum IGPType: SwiftProtobuf.Enum {
+    public typealias RawValue = Int
     case userJoined // = 0
     case userDeleted // = 1
     case roomCreated // = 2
@@ -516,11 +516,11 @@ struct IGPRoomMessageLog: SwiftProtobuf.Message {
     case missedSecretChat // = 13
     case UNRECOGNIZED(Int)
 
-    init() {
+    public init() {
       self = .userJoined
     }
 
-    init?(rawValue: Int) {
+    public init?(rawValue: Int) {
       switch rawValue {
       case 0: self = .userJoined
       case 1: self = .userDeleted
@@ -540,7 +540,7 @@ struct IGPRoomMessageLog: SwiftProtobuf.Message {
       }
     }
 
-    var rawValue: Int {
+    public var rawValue: Int {
       switch self {
       case .userJoined: return 0
       case .userDeleted: return 1
@@ -562,17 +562,17 @@ struct IGPRoomMessageLog: SwiftProtobuf.Message {
 
   }
 
-  enum IGPExtraType: SwiftProtobuf.Enum {
-    typealias RawValue = Int
+  public enum IGPExtraType: SwiftProtobuf.Enum {
+    public typealias RawValue = Int
     case noExtra // = 0
     case targetUser // = 1
     case UNRECOGNIZED(Int)
 
-    init() {
+    public init() {
       self = .noExtra
     }
 
-    init?(rawValue: Int) {
+    public init?(rawValue: Int) {
       switch rawValue {
       case 0: self = .noExtra
       case 1: self = .targetUser
@@ -580,7 +580,7 @@ struct IGPRoomMessageLog: SwiftProtobuf.Message {
       }
     }
 
-    var rawValue: Int {
+    public var rawValue: Int {
       switch self {
       case .noExtra: return 0
       case .targetUser: return 1
@@ -590,20 +590,20 @@ struct IGPRoomMessageLog: SwiftProtobuf.Message {
 
   }
 
-  struct IGPTargetUser: SwiftProtobuf.Message {
-    static let protoMessageName: String = IGPRoomMessageLog.protoMessageName + ".IGPTargetUser"
+  public struct IGPTargetUser: SwiftProtobuf.Message {
+    public static let protoMessageName: String = IGPRoomMessageLog.protoMessageName + ".IGPTargetUser"
 
-    var igpID: Int64 = 0
+    public var igpID: Int64 = 0
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
 
     /// Used by the decoding initializers in the SwiftProtobuf library, not generally
     /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
     /// initializers are defined in the SwiftProtobuf library. See the Message and
     /// Message+*Additions` files.
-    mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
       while let fieldNumber = try decoder.nextFieldNumber() {
         switch fieldNumber {
         case 1: try decoder.decodeSingularInt64Field(value: &self.igpID)
@@ -616,7 +616,7 @@ struct IGPRoomMessageLog: SwiftProtobuf.Message {
     /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
     /// other serializer methods are defined in the SwiftProtobuf library. See the
     /// `Message` and `Message+*Additions` files.
-    func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
       if self.igpID != 0 {
         try visitor.visitSingularInt64Field(value: self.igpID, fieldNumber: 1)
       }
@@ -624,13 +624,13 @@ struct IGPRoomMessageLog: SwiftProtobuf.Message {
     }
   }
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -648,7 +648,7 @@ struct IGPRoomMessageLog: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if _storage._igpType != .userJoined {
         try visitor.visitSingularEnumField(value: _storage._igpType, fieldNumber: 1)
@@ -666,28 +666,28 @@ struct IGPRoomMessageLog: SwiftProtobuf.Message {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct IGPRoomMessageContact: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPRoomMessageContact"
+public struct IGPRoomMessageContact: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPRoomMessageContact"
 
-  var igpFirstName: String = String()
+  public var igpFirstName: String = String()
 
-  var igpLastName: String = String()
+  public var igpLastName: String = String()
 
-  var igpNickname: String = String()
+  public var igpNickname: String = String()
 
-  var igpPhone: [String] = []
+  public var igpPhone: [String] = []
 
-  var igpEmail: [String] = []
+  public var igpEmail: [String] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       switch fieldNumber {
       case 1: try decoder.decodeSingularStringField(value: &self.igpFirstName)
@@ -704,7 +704,7 @@ struct IGPRoomMessageContact: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.igpFirstName.isEmpty {
       try visitor.visitSingularStringField(value: self.igpFirstName, fieldNumber: 1)
     }
@@ -724,22 +724,22 @@ struct IGPRoomMessageContact: SwiftProtobuf.Message {
   }
 }
 
-struct IGPRoomMessageForwardFrom: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPRoomMessageForwardFrom"
+public struct IGPRoomMessageForwardFrom: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPRoomMessageForwardFrom"
 
-  var igpRoomID: Int64 = 0
+  public var igpRoomID: Int64 = 0
 
-  var igpMessageID: Int64 = 0
+  public var igpMessageID: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       switch fieldNumber {
       case 1: try decoder.decodeSingularInt64Field(value: &self.igpRoomID)
@@ -753,7 +753,7 @@ struct IGPRoomMessageForwardFrom: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.igpRoomID != 0 {
       try visitor.visitSingularInt64Field(value: self.igpRoomID, fieldNumber: 1)
     }
@@ -764,92 +764,92 @@ struct IGPRoomMessageForwardFrom: SwiftProtobuf.Message {
   }
 }
 
-struct IGPRegisteredUser: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPRegisteredUser"
+public struct IGPRegisteredUser: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPRegisteredUser"
 
-  var igpID: Int64 {
+  public var igpID: Int64 {
     get {return _storage._igpID}
     set {_uniqueStorage()._igpID = newValue}
   }
 
-  var igpUsername: String {
+  public var igpUsername: String {
     get {return _storage._igpUsername}
     set {_uniqueStorage()._igpUsername = newValue}
   }
 
-  var igpPhone: Int64 {
+  public var igpPhone: Int64 {
     get {return _storage._igpPhone}
     set {_uniqueStorage()._igpPhone = newValue}
   }
 
-  var igpFirstName: String {
+  public var igpFirstName: String {
     get {return _storage._igpFirstName}
     set {_uniqueStorage()._igpFirstName = newValue}
   }
 
-  var igpLastName: String {
+  public var igpLastName: String {
     get {return _storage._igpLastName}
     set {_uniqueStorage()._igpLastName = newValue}
   }
 
-  var igpDisplayName: String {
+  public var igpDisplayName: String {
     get {return _storage._igpDisplayName}
     set {_uniqueStorage()._igpDisplayName = newValue}
   }
 
-  var igpInitials: String {
+  public var igpInitials: String {
     get {return _storage._igpInitials}
     set {_uniqueStorage()._igpInitials = newValue}
   }
 
-  var igpColor: String {
+  public var igpColor: String {
     get {return _storage._igpColor}
     set {_uniqueStorage()._igpColor = newValue}
   }
 
-  var igpStatus: IGPRegisteredUser.IGPStatus {
+  public var igpStatus: IGPRegisteredUser.IGPStatus {
     get {return _storage._igpStatus}
     set {_uniqueStorage()._igpStatus = newValue}
   }
 
-  var igpLastSeen: Int32 {
+  public var igpLastSeen: Int32 {
     get {return _storage._igpLastSeen}
     set {_uniqueStorage()._igpLastSeen = newValue}
   }
 
-  var igpAvatarCount: Int32 {
+  public var igpAvatarCount: Int32 {
     get {return _storage._igpAvatarCount}
     set {_uniqueStorage()._igpAvatarCount = newValue}
   }
 
-  var igpAvatar: IGPAvatar {
+  public var igpAvatar: IGPAvatar {
     get {return _storage._igpAvatar ?? IGPAvatar()}
     set {_uniqueStorage()._igpAvatar = newValue}
   }
   /// Returns true if `igpAvatar` has been explicitly set.
-  var hasIgpAvatar: Bool {return _storage._igpAvatar != nil}
+  public var hasIgpAvatar: Bool {return _storage._igpAvatar != nil}
   /// Clears the value of `igpAvatar`. Subsequent reads from it will return its default value.
-  mutating func clearIgpAvatar() {_storage._igpAvatar = nil}
+  public mutating func clearIgpAvatar() {_storage._igpAvatar = nil}
 
-  var igpMutual: Bool {
+  public var igpMutual: Bool {
     get {return _storage._igpMutual}
     set {_uniqueStorage()._igpMutual = newValue}
   }
 
-  var igpDeleted: Bool {
+  public var igpDeleted: Bool {
     get {return _storage._igpDeleted}
     set {_uniqueStorage()._igpDeleted = newValue}
   }
 
-  var igpCacheID: String {
+  public var igpCacheID: String {
     get {return _storage._igpCacheID}
     set {_uniqueStorage()._igpCacheID = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  enum IGPStatus: SwiftProtobuf.Enum {
-    typealias RawValue = Int
+  public enum IGPStatus: SwiftProtobuf.Enum {
+    public typealias RawValue = Int
     case longTimeAgo // = 0
     case lastMonth // = 1
     case lastWeek // = 2
@@ -860,11 +860,11 @@ struct IGPRegisteredUser: SwiftProtobuf.Message {
     case serviceNotifications // = 7
     case UNRECOGNIZED(Int)
 
-    init() {
+    public init() {
       self = .longTimeAgo
     }
 
-    init?(rawValue: Int) {
+    public init?(rawValue: Int) {
       switch rawValue {
       case 0: self = .longTimeAgo
       case 1: self = .lastMonth
@@ -878,7 +878,7 @@ struct IGPRegisteredUser: SwiftProtobuf.Message {
       }
     }
 
-    var rawValue: Int {
+    public var rawValue: Int {
       switch self {
       case .longTimeAgo: return 0
       case .lastMonth: return 1
@@ -894,13 +894,13 @@ struct IGPRegisteredUser: SwiftProtobuf.Message {
 
   }
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -930,7 +930,7 @@ struct IGPRegisteredUser: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if _storage._igpID != 0 {
         try visitor.visitSingularInt64Field(value: _storage._igpID, fieldNumber: 1)
@@ -984,32 +984,32 @@ struct IGPRegisteredUser: SwiftProtobuf.Message {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct IGPAvatar: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPAvatar"
+public struct IGPAvatar: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPAvatar"
 
-  var igpID: Int64 {
+  public var igpID: Int64 {
     get {return _storage._igpID}
     set {_uniqueStorage()._igpID = newValue}
   }
 
-  var igpFile: IGPFile {
+  public var igpFile: IGPFile {
     get {return _storage._igpFile ?? IGPFile()}
     set {_uniqueStorage()._igpFile = newValue}
   }
   /// Returns true if `igpFile` has been explicitly set.
-  var hasIgpFile: Bool {return _storage._igpFile != nil}
+  public var hasIgpFile: Bool {return _storage._igpFile != nil}
   /// Clears the value of `igpFile`. Subsequent reads from it will return its default value.
-  mutating func clearIgpFile() {_storage._igpFile = nil}
+  public mutating func clearIgpFile() {_storage._igpFile = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -1026,7 +1026,7 @@ struct IGPAvatar: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if _storage._igpID != 0 {
         try visitor.visitSingularInt64Field(value: _storage._igpID, fieldNumber: 1)
@@ -1041,154 +1041,154 @@ struct IGPAvatar: SwiftProtobuf.Message {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct IGPRoomMessage: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPRoomMessage"
+public struct IGPRoomMessage: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPRoomMessage"
 
-  var igpMessageID: Int64 {
+  public var igpMessageID: Int64 {
     get {return _storage._igpMessageID}
     set {_uniqueStorage()._igpMessageID = newValue}
   }
 
-  var igpMessageVersion: Int64 {
+  public var igpMessageVersion: Int64 {
     get {return _storage._igpMessageVersion}
     set {_uniqueStorage()._igpMessageVersion = newValue}
   }
 
-  var igpStatus: IGPRoomMessageStatus {
+  public var igpStatus: IGPRoomMessageStatus {
     get {return _storage._igpStatus}
     set {_uniqueStorage()._igpStatus = newValue}
   }
 
-  var igpStatusVersion: Int64 {
+  public var igpStatusVersion: Int64 {
     get {return _storage._igpStatusVersion}
     set {_uniqueStorage()._igpStatusVersion = newValue}
   }
 
-  var igpMessageType: IGPRoomMessageType {
+  public var igpMessageType: IGPRoomMessageType {
     get {return _storage._igpMessageType}
     set {_uniqueStorage()._igpMessageType = newValue}
   }
 
-  var igpMessage: String {
+  public var igpMessage: String {
     get {return _storage._igpMessage}
     set {_uniqueStorage()._igpMessage = newValue}
   }
 
-  var igpAttachment: IGPFile {
+  public var igpAttachment: IGPFile {
     get {return _storage._igpAttachment ?? IGPFile()}
     set {_uniqueStorage()._igpAttachment = newValue}
   }
   /// Returns true if `igpAttachment` has been explicitly set.
-  var hasIgpAttachment: Bool {return _storage._igpAttachment != nil}
+  public var hasIgpAttachment: Bool {return _storage._igpAttachment != nil}
   /// Clears the value of `igpAttachment`. Subsequent reads from it will return its default value.
-  mutating func clearIgpAttachment() {_storage._igpAttachment = nil}
+  public mutating func clearIgpAttachment() {_storage._igpAttachment = nil}
 
-  var igpAuthor: IGPRoomMessage.IGPAuthor {
+  public var igpAuthor: IGPRoomMessage.IGPAuthor {
     get {return _storage._igpAuthor ?? IGPRoomMessage.IGPAuthor()}
     set {_uniqueStorage()._igpAuthor = newValue}
   }
   /// Returns true if `igpAuthor` has been explicitly set.
-  var hasIgpAuthor: Bool {return _storage._igpAuthor != nil}
+  public var hasIgpAuthor: Bool {return _storage._igpAuthor != nil}
   /// Clears the value of `igpAuthor`. Subsequent reads from it will return its default value.
-  mutating func clearIgpAuthor() {_storage._igpAuthor = nil}
+  public mutating func clearIgpAuthor() {_storage._igpAuthor = nil}
 
-  var igpLocation: IGPRoomMessageLocation {
+  public var igpLocation: IGPRoomMessageLocation {
     get {return _storage._igpLocation ?? IGPRoomMessageLocation()}
     set {_uniqueStorage()._igpLocation = newValue}
   }
   /// Returns true if `igpLocation` has been explicitly set.
-  var hasIgpLocation: Bool {return _storage._igpLocation != nil}
+  public var hasIgpLocation: Bool {return _storage._igpLocation != nil}
   /// Clears the value of `igpLocation`. Subsequent reads from it will return its default value.
-  mutating func clearIgpLocation() {_storage._igpLocation = nil}
+  public mutating func clearIgpLocation() {_storage._igpLocation = nil}
 
-  var igpLog: IGPRoomMessageLog {
+  public var igpLog: IGPRoomMessageLog {
     get {return _storage._igpLog ?? IGPRoomMessageLog()}
     set {_uniqueStorage()._igpLog = newValue}
   }
   /// Returns true if `igpLog` has been explicitly set.
-  var hasIgpLog: Bool {return _storage._igpLog != nil}
+  public var hasIgpLog: Bool {return _storage._igpLog != nil}
   /// Clears the value of `igpLog`. Subsequent reads from it will return its default value.
-  mutating func clearIgpLog() {_storage._igpLog = nil}
+  public mutating func clearIgpLog() {_storage._igpLog = nil}
 
-  var igpContact: IGPRoomMessageContact {
+  public var igpContact: IGPRoomMessageContact {
     get {return _storage._igpContact ?? IGPRoomMessageContact()}
     set {_uniqueStorage()._igpContact = newValue}
   }
   /// Returns true if `igpContact` has been explicitly set.
-  var hasIgpContact: Bool {return _storage._igpContact != nil}
+  public var hasIgpContact: Bool {return _storage._igpContact != nil}
   /// Clears the value of `igpContact`. Subsequent reads from it will return its default value.
-  mutating func clearIgpContact() {_storage._igpContact = nil}
+  public mutating func clearIgpContact() {_storage._igpContact = nil}
 
-  var igpEdited: Bool {
+  public var igpEdited: Bool {
     get {return _storage._igpEdited}
     set {_uniqueStorage()._igpEdited = newValue}
   }
 
-  var igpCreateTime: Int32 {
+  public var igpCreateTime: Int32 {
     get {return _storage._igpCreateTime}
     set {_uniqueStorage()._igpCreateTime = newValue}
   }
 
-  var igpUpdateTime: Int32 {
+  public var igpUpdateTime: Int32 {
     get {return _storage._igpUpdateTime}
     set {_uniqueStorage()._igpUpdateTime = newValue}
   }
 
-  var igpDeleted: Bool {
+  public var igpDeleted: Bool {
     get {return _storage._igpDeleted}
     set {_uniqueStorage()._igpDeleted = newValue}
   }
 
-  var igpForwardFrom: IGPRoomMessage {
+  public var igpForwardFrom: IGPRoomMessage {
     get {return _storage._igpForwardFrom ?? IGPRoomMessage()}
     set {_uniqueStorage()._igpForwardFrom = newValue}
   }
   /// Returns true if `igpForwardFrom` has been explicitly set.
-  var hasIgpForwardFrom: Bool {return _storage._igpForwardFrom != nil}
+  public var hasIgpForwardFrom: Bool {return _storage._igpForwardFrom != nil}
   /// Clears the value of `igpForwardFrom`. Subsequent reads from it will return its default value.
-  mutating func clearIgpForwardFrom() {_storage._igpForwardFrom = nil}
+  public mutating func clearIgpForwardFrom() {_storage._igpForwardFrom = nil}
 
-  var igpReplyTo: IGPRoomMessage {
+  public var igpReplyTo: IGPRoomMessage {
     get {return _storage._igpReplyTo ?? IGPRoomMessage()}
     set {_uniqueStorage()._igpReplyTo = newValue}
   }
   /// Returns true if `igpReplyTo` has been explicitly set.
-  var hasIgpReplyTo: Bool {return _storage._igpReplyTo != nil}
+  public var hasIgpReplyTo: Bool {return _storage._igpReplyTo != nil}
   /// Clears the value of `igpReplyTo`. Subsequent reads from it will return its default value.
-  mutating func clearIgpReplyTo() {_storage._igpReplyTo = nil}
+  public mutating func clearIgpReplyTo() {_storage._igpReplyTo = nil}
 
-  var igpPreviousMessageID: Int64 {
+  public var igpPreviousMessageID: Int64 {
     get {return _storage._igpPreviousMessageID}
     set {_uniqueStorage()._igpPreviousMessageID = newValue}
   }
 
-  var igpExtraType: IGPRoomMessage.IGPExtraType {
+  public var igpExtraType: IGPRoomMessage.IGPExtraType {
     get {return _storage._igpExtraType}
     set {_uniqueStorage()._igpExtraType = newValue}
   }
 
-  var igpChannelExtra: IGPRoomMessage.IGPChannelExtra {
+  public var igpChannelExtra: IGPRoomMessage.IGPChannelExtra {
     get {return _storage._igpChannelExtra ?? IGPRoomMessage.IGPChannelExtra()}
     set {_uniqueStorage()._igpChannelExtra = newValue}
   }
   /// Returns true if `igpChannelExtra` has been explicitly set.
-  var hasIgpChannelExtra: Bool {return _storage._igpChannelExtra != nil}
+  public var hasIgpChannelExtra: Bool {return _storage._igpChannelExtra != nil}
   /// Clears the value of `igpChannelExtra`. Subsequent reads from it will return its default value.
-  mutating func clearIgpChannelExtra() {_storage._igpChannelExtra = nil}
+  public mutating func clearIgpChannelExtra() {_storage._igpChannelExtra = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  enum IGPExtraType: SwiftProtobuf.Enum {
-    typealias RawValue = Int
+  public enum IGPExtraType: SwiftProtobuf.Enum {
+    public typealias RawValue = Int
     case noExtra // = 0
     case channelExtra // = 1
     case UNRECOGNIZED(Int)
 
-    init() {
+    public init() {
       self = .noExtra
     }
 
-    init?(rawValue: Int) {
+    public init?(rawValue: Int) {
       switch rawValue {
       case 0: self = .noExtra
       case 1: self = .channelExtra
@@ -1196,7 +1196,7 @@ struct IGPRoomMessage: SwiftProtobuf.Message {
       }
     }
 
-    var rawValue: Int {
+    public var rawValue: Int {
       switch self {
       case .noExtra: return 0
       case .channelExtra: return 1
@@ -1206,50 +1206,50 @@ struct IGPRoomMessage: SwiftProtobuf.Message {
 
   }
 
-  struct IGPAuthor: SwiftProtobuf.Message {
-    static let protoMessageName: String = IGPRoomMessage.protoMessageName + ".IGPAuthor"
+  public struct IGPAuthor: SwiftProtobuf.Message {
+    public static let protoMessageName: String = IGPRoomMessage.protoMessageName + ".IGPAuthor"
 
-    var igpHash: String {
+    public var igpHash: String {
       get {return _storage._igpHash}
       set {_uniqueStorage()._igpHash = newValue}
     }
 
-    var igpUser: IGPRoomMessage.IGPAuthor.IGPUser {
+    public var igpUser: IGPRoomMessage.IGPAuthor.IGPUser {
       get {return _storage._igpUser ?? IGPRoomMessage.IGPAuthor.IGPUser()}
       set {_uniqueStorage()._igpUser = newValue}
     }
     /// Returns true if `igpUser` has been explicitly set.
-    var hasIgpUser: Bool {return _storage._igpUser != nil}
+    public var hasIgpUser: Bool {return _storage._igpUser != nil}
     /// Clears the value of `igpUser`. Subsequent reads from it will return its default value.
-    mutating func clearIgpUser() {_storage._igpUser = nil}
+    public mutating func clearIgpUser() {_storage._igpUser = nil}
 
-    var igpRoom: IGPRoomMessage.IGPAuthor.IGPRoom {
+    public var igpRoom: IGPRoomMessage.IGPAuthor.IGPRoom {
       get {return _storage._igpRoom ?? IGPRoomMessage.IGPAuthor.IGPRoom()}
       set {_uniqueStorage()._igpRoom = newValue}
     }
     /// Returns true if `igpRoom` has been explicitly set.
-    var hasIgpRoom: Bool {return _storage._igpRoom != nil}
+    public var hasIgpRoom: Bool {return _storage._igpRoom != nil}
     /// Clears the value of `igpRoom`. Subsequent reads from it will return its default value.
-    mutating func clearIgpRoom() {_storage._igpRoom = nil}
+    public mutating func clearIgpRoom() {_storage._igpRoom = nil}
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    struct IGPUser: SwiftProtobuf.Message {
-      static let protoMessageName: String = IGPRoomMessage.IGPAuthor.protoMessageName + ".IGPUser"
+    public struct IGPUser: SwiftProtobuf.Message {
+      public static let protoMessageName: String = IGPRoomMessage.IGPAuthor.protoMessageName + ".IGPUser"
 
-      var igpUserID: Int64 = 0
+      public var igpUserID: Int64 = 0
 
-      var igpCacheID: String = String()
+      public var igpCacheID: String = String()
 
-      var unknownFields = SwiftProtobuf.UnknownStorage()
+      public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-      init() {}
+      public init() {}
 
       /// Used by the decoding initializers in the SwiftProtobuf library, not generally
       /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
       /// initializers are defined in the SwiftProtobuf library. See the Message and
       /// Message+*Additions` files.
-      mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+      public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
         while let fieldNumber = try decoder.nextFieldNumber() {
           switch fieldNumber {
           case 1: try decoder.decodeSingularInt64Field(value: &self.igpUserID)
@@ -1263,7 +1263,7 @@ struct IGPRoomMessage: SwiftProtobuf.Message {
       /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
       /// other serializer methods are defined in the SwiftProtobuf library. See the
       /// `Message` and `Message+*Additions` files.
-      func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+      public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
         if self.igpUserID != 0 {
           try visitor.visitSingularInt64Field(value: self.igpUserID, fieldNumber: 1)
         }
@@ -1274,20 +1274,20 @@ struct IGPRoomMessage: SwiftProtobuf.Message {
       }
     }
 
-    struct IGPRoom: SwiftProtobuf.Message {
-      static let protoMessageName: String = IGPRoomMessage.IGPAuthor.protoMessageName + ".IGPRoom"
+    public struct IGPRoom: SwiftProtobuf.Message {
+      public static let protoMessageName: String = IGPRoomMessage.IGPAuthor.protoMessageName + ".IGPRoom"
 
-      var igpRoomID: Int64 = 0
+      public var igpRoomID: Int64 = 0
 
-      var unknownFields = SwiftProtobuf.UnknownStorage()
+      public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-      init() {}
+      public init() {}
 
       /// Used by the decoding initializers in the SwiftProtobuf library, not generally
       /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
       /// initializers are defined in the SwiftProtobuf library. See the Message and
       /// Message+*Additions` files.
-      mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+      public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
         while let fieldNumber = try decoder.nextFieldNumber() {
           switch fieldNumber {
           case 1: try decoder.decodeSingularInt64Field(value: &self.igpRoomID)
@@ -1300,7 +1300,7 @@ struct IGPRoomMessage: SwiftProtobuf.Message {
       /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
       /// other serializer methods are defined in the SwiftProtobuf library. See the
       /// `Message` and `Message+*Additions` files.
-      func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+      public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
         if self.igpRoomID != 0 {
           try visitor.visitSingularInt64Field(value: self.igpRoomID, fieldNumber: 1)
         }
@@ -1308,13 +1308,13 @@ struct IGPRoomMessage: SwiftProtobuf.Message {
       }
     }
 
-    init() {}
+    public init() {}
 
     /// Used by the decoding initializers in the SwiftProtobuf library, not generally
     /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
     /// initializers are defined in the SwiftProtobuf library. See the Message and
     /// Message+*Additions` files.
-    mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
       _ = _uniqueStorage()
       try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
         while let fieldNumber = try decoder.nextFieldNumber() {
@@ -1332,7 +1332,7 @@ struct IGPRoomMessage: SwiftProtobuf.Message {
     /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
     /// other serializer methods are defined in the SwiftProtobuf library. See the
     /// `Message` and `Message+*Additions` files.
-    func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
       try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
         if !_storage._igpHash.isEmpty {
           try visitor.visitSingularStringField(value: _storage._igpHash, fieldNumber: 1)
@@ -1350,26 +1350,26 @@ struct IGPRoomMessage: SwiftProtobuf.Message {
     fileprivate var _storage = _StorageClass.defaultInstance
   }
 
-  struct IGPChannelExtra: SwiftProtobuf.Message {
-    static let protoMessageName: String = IGPRoomMessage.protoMessageName + ".IGPChannelExtra"
+  public struct IGPChannelExtra: SwiftProtobuf.Message {
+    public static let protoMessageName: String = IGPRoomMessage.protoMessageName + ".IGPChannelExtra"
 
-    var igpSignature: String = String()
+    public var igpSignature: String = String()
 
-    var igpViewsLabel: String = String()
+    public var igpViewsLabel: String = String()
 
-    var igpThumbsUpLabel: String = String()
+    public var igpThumbsUpLabel: String = String()
 
-    var igpThumbsDownLabel: String = String()
+    public var igpThumbsDownLabel: String = String()
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
 
     /// Used by the decoding initializers in the SwiftProtobuf library, not generally
     /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
     /// initializers are defined in the SwiftProtobuf library. See the Message and
     /// Message+*Additions` files.
-    mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
       while let fieldNumber = try decoder.nextFieldNumber() {
         switch fieldNumber {
         case 1: try decoder.decodeSingularStringField(value: &self.igpSignature)
@@ -1385,7 +1385,7 @@ struct IGPRoomMessage: SwiftProtobuf.Message {
     /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
     /// other serializer methods are defined in the SwiftProtobuf library. See the
     /// `Message` and `Message+*Additions` files.
-    func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
       if !self.igpSignature.isEmpty {
         try visitor.visitSingularStringField(value: self.igpSignature, fieldNumber: 1)
       }
@@ -1402,13 +1402,13 @@ struct IGPRoomMessage: SwiftProtobuf.Message {
     }
   }
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -1443,7 +1443,7 @@ struct IGPRoomMessage: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if _storage._igpMessageID != 0 {
         try visitor.visitSingularInt64Field(value: _storage._igpMessageID, fieldNumber: 1)
@@ -1512,22 +1512,22 @@ struct IGPRoomMessage: SwiftProtobuf.Message {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct IGPRoomDraft: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPRoomDraft"
+public struct IGPRoomDraft: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPRoomDraft"
 
-  var igpMessage: String = String()
+  public var igpMessage: String = String()
 
-  var igpReplyTo: Int64 = 0
+  public var igpReplyTo: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       switch fieldNumber {
       case 1: try decoder.decodeSingularStringField(value: &self.igpMessage)
@@ -1541,7 +1541,7 @@ struct IGPRoomDraft: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.igpMessage.isEmpty {
       try visitor.visitSingularStringField(value: self.igpMessage, fieldNumber: 1)
     }
@@ -1552,117 +1552,117 @@ struct IGPRoomDraft: SwiftProtobuf.Message {
   }
 }
 
-struct IGPRoom: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPRoom"
+public struct IGPRoom: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPRoom"
 
-  var igpID: Int64 {
+  public var igpID: Int64 {
     get {return _storage._igpID}
     set {_uniqueStorage()._igpID = newValue}
   }
 
-  var igpType: IGPRoom.IGPType {
+  public var igpType: IGPRoom.IGPType {
     get {return _storage._igpType}
     set {_uniqueStorage()._igpType = newValue}
   }
 
-  var igpTitle: String {
+  public var igpTitle: String {
     get {return _storage._igpTitle}
     set {_uniqueStorage()._igpTitle = newValue}
   }
 
-  var igpInitials: String {
+  public var igpInitials: String {
     get {return _storage._igpInitials}
     set {_uniqueStorage()._igpInitials = newValue}
   }
 
-  var igpColor: String {
+  public var igpColor: String {
     get {return _storage._igpColor}
     set {_uniqueStorage()._igpColor = newValue}
   }
 
-  var igpUnreadCount: Int32 {
+  public var igpUnreadCount: Int32 {
     get {return _storage._igpUnreadCount}
     set {_uniqueStorage()._igpUnreadCount = newValue}
   }
 
-  var igpLastMessage: IGPRoomMessage {
+  public var igpLastMessage: IGPRoomMessage {
     get {return _storage._igpLastMessage ?? IGPRoomMessage()}
     set {_uniqueStorage()._igpLastMessage = newValue}
   }
   /// Returns true if `igpLastMessage` has been explicitly set.
-  var hasIgpLastMessage: Bool {return _storage._igpLastMessage != nil}
+  public var hasIgpLastMessage: Bool {return _storage._igpLastMessage != nil}
   /// Clears the value of `igpLastMessage`. Subsequent reads from it will return its default value.
-  mutating func clearIgpLastMessage() {_storage._igpLastMessage = nil}
+  public mutating func clearIgpLastMessage() {_storage._igpLastMessage = nil}
 
-  var igpReadOnly: Bool {
+  public var igpReadOnly: Bool {
     get {return _storage._igpReadOnly}
     set {_uniqueStorage()._igpReadOnly = newValue}
   }
 
-  var igpIsParticipant: Bool {
+  public var igpIsParticipant: Bool {
     get {return _storage._igpIsParticipant}
     set {_uniqueStorage()._igpIsParticipant = newValue}
   }
 
-  var igpDraft: IGPRoomDraft {
+  public var igpDraft: IGPRoomDraft {
     get {return _storage._igpDraft ?? IGPRoomDraft()}
     set {_uniqueStorage()._igpDraft = newValue}
   }
   /// Returns true if `igpDraft` has been explicitly set.
-  var hasIgpDraft: Bool {return _storage._igpDraft != nil}
+  public var hasIgpDraft: Bool {return _storage._igpDraft != nil}
   /// Clears the value of `igpDraft`. Subsequent reads from it will return its default value.
-  mutating func clearIgpDraft() {_storage._igpDraft = nil}
+  public mutating func clearIgpDraft() {_storage._igpDraft = nil}
 
-  var igpFirstUnreadMessage: IGPRoomMessage {
+  public var igpFirstUnreadMessage: IGPRoomMessage {
     get {return _storage._igpFirstUnreadMessage ?? IGPRoomMessage()}
     set {_uniqueStorage()._igpFirstUnreadMessage = newValue}
   }
   /// Returns true if `igpFirstUnreadMessage` has been explicitly set.
-  var hasIgpFirstUnreadMessage: Bool {return _storage._igpFirstUnreadMessage != nil}
+  public var hasIgpFirstUnreadMessage: Bool {return _storage._igpFirstUnreadMessage != nil}
   /// Clears the value of `igpFirstUnreadMessage`. Subsequent reads from it will return its default value.
-  mutating func clearIgpFirstUnreadMessage() {_storage._igpFirstUnreadMessage = nil}
+  public mutating func clearIgpFirstUnreadMessage() {_storage._igpFirstUnreadMessage = nil}
 
-  var igpChatRoomExtra: IGPChatRoom {
+  public var igpChatRoomExtra: IGPChatRoom {
     get {return _storage._igpChatRoomExtra ?? IGPChatRoom()}
     set {_uniqueStorage()._igpChatRoomExtra = newValue}
   }
   /// Returns true if `igpChatRoomExtra` has been explicitly set.
-  var hasIgpChatRoomExtra: Bool {return _storage._igpChatRoomExtra != nil}
+  public var hasIgpChatRoomExtra: Bool {return _storage._igpChatRoomExtra != nil}
   /// Clears the value of `igpChatRoomExtra`. Subsequent reads from it will return its default value.
-  mutating func clearIgpChatRoomExtra() {_storage._igpChatRoomExtra = nil}
+  public mutating func clearIgpChatRoomExtra() {_storage._igpChatRoomExtra = nil}
 
-  var igpGroupRoomExtra: IGPGroupRoom {
+  public var igpGroupRoomExtra: IGPGroupRoom {
     get {return _storage._igpGroupRoomExtra ?? IGPGroupRoom()}
     set {_uniqueStorage()._igpGroupRoomExtra = newValue}
   }
   /// Returns true if `igpGroupRoomExtra` has been explicitly set.
-  var hasIgpGroupRoomExtra: Bool {return _storage._igpGroupRoomExtra != nil}
+  public var hasIgpGroupRoomExtra: Bool {return _storage._igpGroupRoomExtra != nil}
   /// Clears the value of `igpGroupRoomExtra`. Subsequent reads from it will return its default value.
-  mutating func clearIgpGroupRoomExtra() {_storage._igpGroupRoomExtra = nil}
+  public mutating func clearIgpGroupRoomExtra() {_storage._igpGroupRoomExtra = nil}
 
-  var igpChannelRoomExtra: IGPChannelRoom {
+  public var igpChannelRoomExtra: IGPChannelRoom {
     get {return _storage._igpChannelRoomExtra ?? IGPChannelRoom()}
     set {_uniqueStorage()._igpChannelRoomExtra = newValue}
   }
   /// Returns true if `igpChannelRoomExtra` has been explicitly set.
-  var hasIgpChannelRoomExtra: Bool {return _storage._igpChannelRoomExtra != nil}
+  public var hasIgpChannelRoomExtra: Bool {return _storage._igpChannelRoomExtra != nil}
   /// Clears the value of `igpChannelRoomExtra`. Subsequent reads from it will return its default value.
-  mutating func clearIgpChannelRoomExtra() {_storage._igpChannelRoomExtra = nil}
+  public mutating func clearIgpChannelRoomExtra() {_storage._igpChannelRoomExtra = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  enum IGPType: SwiftProtobuf.Enum {
-    typealias RawValue = Int
+  public enum IGPType: SwiftProtobuf.Enum {
+    public typealias RawValue = Int
     case chat // = 0
     case group // = 1
     case channel // = 2
     case UNRECOGNIZED(Int)
 
-    init() {
+    public init() {
       self = .chat
     }
 
-    init?(rawValue: Int) {
+    public init?(rawValue: Int) {
       switch rawValue {
       case 0: self = .chat
       case 1: self = .group
@@ -1671,7 +1671,7 @@ struct IGPRoom: SwiftProtobuf.Message {
       }
     }
 
-    var rawValue: Int {
+    public var rawValue: Int {
       switch self {
       case .chat: return 0
       case .group: return 1
@@ -1682,13 +1682,13 @@ struct IGPRoom: SwiftProtobuf.Message {
 
   }
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -1717,7 +1717,7 @@ struct IGPRoom: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if _storage._igpID != 0 {
         try visitor.visitSingularInt64Field(value: _storage._igpID, fieldNumber: 1)
@@ -1768,27 +1768,27 @@ struct IGPRoom: SwiftProtobuf.Message {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct IGPChatRoom: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPChatRoom"
+public struct IGPChatRoom: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPChatRoom"
 
-  var igpPeer: IGPRegisteredUser {
+  public var igpPeer: IGPRegisteredUser {
     get {return _storage._igpPeer ?? IGPRegisteredUser()}
     set {_uniqueStorage()._igpPeer = newValue}
   }
   /// Returns true if `igpPeer` has been explicitly set.
-  var hasIgpPeer: Bool {return _storage._igpPeer != nil}
+  public var hasIgpPeer: Bool {return _storage._igpPeer != nil}
   /// Clears the value of `igpPeer`. Subsequent reads from it will return its default value.
-  mutating func clearIgpPeer() {_storage._igpPeer = nil}
+  public mutating func clearIgpPeer() {_storage._igpPeer = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -1804,7 +1804,7 @@ struct IGPChatRoom: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._igpPeer {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -1816,89 +1816,89 @@ struct IGPChatRoom: SwiftProtobuf.Message {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct IGPGroupRoom: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPGroupRoom"
+public struct IGPGroupRoom: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPGroupRoom"
 
-  var igpType: IGPGroupRoom.IGPType {
+  public var igpType: IGPGroupRoom.IGPType {
     get {return _storage._igpType}
     set {_uniqueStorage()._igpType = newValue}
   }
 
-  var igpRole: IGPGroupRoom.IGPRole {
+  public var igpRole: IGPGroupRoom.IGPRole {
     get {return _storage._igpRole}
     set {_uniqueStorage()._igpRole = newValue}
   }
 
-  var igpParticipantsCount: Int32 {
+  public var igpParticipantsCount: Int32 {
     get {return _storage._igpParticipantsCount}
     set {_uniqueStorage()._igpParticipantsCount = newValue}
   }
 
-  var igpParticipantsCountLabel: String {
+  public var igpParticipantsCountLabel: String {
     get {return _storage._igpParticipantsCountLabel}
     set {_uniqueStorage()._igpParticipantsCountLabel = newValue}
   }
 
-  var igpParticipantsCountLimit: Int32 {
+  public var igpParticipantsCountLimit: Int32 {
     get {return _storage._igpParticipantsCountLimit}
     set {_uniqueStorage()._igpParticipantsCountLimit = newValue}
   }
 
-  var igpParticipantsCountLimitLabel: String {
+  public var igpParticipantsCountLimitLabel: String {
     get {return _storage._igpParticipantsCountLimitLabel}
     set {_uniqueStorage()._igpParticipantsCountLimitLabel = newValue}
   }
 
-  var igpDescription: String {
+  public var igpDescription: String {
     get {return _storage._igpDescription}
     set {_uniqueStorage()._igpDescription = newValue}
   }
 
-  var igpAvatarCount: Int32 {
+  public var igpAvatarCount: Int32 {
     get {return _storage._igpAvatarCount}
     set {_uniqueStorage()._igpAvatarCount = newValue}
   }
 
-  var igpAvatar: IGPAvatar {
+  public var igpAvatar: IGPAvatar {
     get {return _storage._igpAvatar ?? IGPAvatar()}
     set {_uniqueStorage()._igpAvatar = newValue}
   }
   /// Returns true if `igpAvatar` has been explicitly set.
-  var hasIgpAvatar: Bool {return _storage._igpAvatar != nil}
+  public var hasIgpAvatar: Bool {return _storage._igpAvatar != nil}
   /// Clears the value of `igpAvatar`. Subsequent reads from it will return its default value.
-  mutating func clearIgpAvatar() {_storage._igpAvatar = nil}
+  public mutating func clearIgpAvatar() {_storage._igpAvatar = nil}
 
-  var igpPrivateExtra: IGPGroupRoom.IGPPrivateExtra {
+  public var igpPrivateExtra: IGPGroupRoom.IGPPrivateExtra {
     get {return _storage._igpPrivateExtra ?? IGPGroupRoom.IGPPrivateExtra()}
     set {_uniqueStorage()._igpPrivateExtra = newValue}
   }
   /// Returns true if `igpPrivateExtra` has been explicitly set.
-  var hasIgpPrivateExtra: Bool {return _storage._igpPrivateExtra != nil}
+  public var hasIgpPrivateExtra: Bool {return _storage._igpPrivateExtra != nil}
   /// Clears the value of `igpPrivateExtra`. Subsequent reads from it will return its default value.
-  mutating func clearIgpPrivateExtra() {_storage._igpPrivateExtra = nil}
+  public mutating func clearIgpPrivateExtra() {_storage._igpPrivateExtra = nil}
 
-  var igpPublicExtra: IGPGroupRoom.IGPPublicExtra {
+  public var igpPublicExtra: IGPGroupRoom.IGPPublicExtra {
     get {return _storage._igpPublicExtra ?? IGPGroupRoom.IGPPublicExtra()}
     set {_uniqueStorage()._igpPublicExtra = newValue}
   }
   /// Returns true if `igpPublicExtra` has been explicitly set.
-  var hasIgpPublicExtra: Bool {return _storage._igpPublicExtra != nil}
+  public var hasIgpPublicExtra: Bool {return _storage._igpPublicExtra != nil}
   /// Clears the value of `igpPublicExtra`. Subsequent reads from it will return its default value.
-  mutating func clearIgpPublicExtra() {_storage._igpPublicExtra = nil}
+  public mutating func clearIgpPublicExtra() {_storage._igpPublicExtra = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  enum IGPType: SwiftProtobuf.Enum {
-    typealias RawValue = Int
+  public enum IGPType: SwiftProtobuf.Enum {
+    public typealias RawValue = Int
     case privateRoom // = 0
     case publicRoom // = 1
     case UNRECOGNIZED(Int)
 
-    init() {
+    public init() {
       self = .privateRoom
     }
 
-    init?(rawValue: Int) {
+    public init?(rawValue: Int) {
       switch rawValue {
       case 0: self = .privateRoom
       case 1: self = .publicRoom
@@ -1906,7 +1906,7 @@ struct IGPGroupRoom: SwiftProtobuf.Message {
       }
     }
 
-    var rawValue: Int {
+    public var rawValue: Int {
       switch self {
       case .privateRoom: return 0
       case .publicRoom: return 1
@@ -1916,19 +1916,19 @@ struct IGPGroupRoom: SwiftProtobuf.Message {
 
   }
 
-  enum IGPRole: SwiftProtobuf.Enum {
-    typealias RawValue = Int
+  public enum IGPRole: SwiftProtobuf.Enum {
+    public typealias RawValue = Int
     case member // = 0
     case moderator // = 1
     case admin // = 2
     case owner // = 3
     case UNRECOGNIZED(Int)
 
-    init() {
+    public init() {
       self = .member
     }
 
-    init?(rawValue: Int) {
+    public init?(rawValue: Int) {
       switch rawValue {
       case 0: self = .member
       case 1: self = .moderator
@@ -1938,7 +1938,7 @@ struct IGPGroupRoom: SwiftProtobuf.Message {
       }
     }
 
-    var rawValue: Int {
+    public var rawValue: Int {
       switch self {
       case .member: return 0
       case .moderator: return 1
@@ -1950,22 +1950,22 @@ struct IGPGroupRoom: SwiftProtobuf.Message {
 
   }
 
-  struct IGPPrivateExtra: SwiftProtobuf.Message {
-    static let protoMessageName: String = IGPGroupRoom.protoMessageName + ".IGPPrivateExtra"
+  public struct IGPPrivateExtra: SwiftProtobuf.Message {
+    public static let protoMessageName: String = IGPGroupRoom.protoMessageName + ".IGPPrivateExtra"
 
-    var igpInviteLink: String = String()
+    public var igpInviteLink: String = String()
 
-    var igpInviteToken: String = String()
+    public var igpInviteToken: String = String()
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
 
     /// Used by the decoding initializers in the SwiftProtobuf library, not generally
     /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
     /// initializers are defined in the SwiftProtobuf library. See the Message and
     /// Message+*Additions` files.
-    mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
       while let fieldNumber = try decoder.nextFieldNumber() {
         switch fieldNumber {
         case 1: try decoder.decodeSingularStringField(value: &self.igpInviteLink)
@@ -1979,7 +1979,7 @@ struct IGPGroupRoom: SwiftProtobuf.Message {
     /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
     /// other serializer methods are defined in the SwiftProtobuf library. See the
     /// `Message` and `Message+*Additions` files.
-    func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
       if !self.igpInviteLink.isEmpty {
         try visitor.visitSingularStringField(value: self.igpInviteLink, fieldNumber: 1)
       }
@@ -1990,20 +1990,20 @@ struct IGPGroupRoom: SwiftProtobuf.Message {
     }
   }
 
-  struct IGPPublicExtra: SwiftProtobuf.Message {
-    static let protoMessageName: String = IGPGroupRoom.protoMessageName + ".IGPPublicExtra"
+  public struct IGPPublicExtra: SwiftProtobuf.Message {
+    public static let protoMessageName: String = IGPGroupRoom.protoMessageName + ".IGPPublicExtra"
 
-    var igpUsername: String = String()
+    public var igpUsername: String = String()
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
 
     /// Used by the decoding initializers in the SwiftProtobuf library, not generally
     /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
     /// initializers are defined in the SwiftProtobuf library. See the Message and
     /// Message+*Additions` files.
-    mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
       while let fieldNumber = try decoder.nextFieldNumber() {
         switch fieldNumber {
         case 1: try decoder.decodeSingularStringField(value: &self.igpUsername)
@@ -2016,7 +2016,7 @@ struct IGPGroupRoom: SwiftProtobuf.Message {
     /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
     /// other serializer methods are defined in the SwiftProtobuf library. See the
     /// `Message` and `Message+*Additions` files.
-    func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
       if !self.igpUsername.isEmpty {
         try visitor.visitSingularStringField(value: self.igpUsername, fieldNumber: 1)
       }
@@ -2024,13 +2024,13 @@ struct IGPGroupRoom: SwiftProtobuf.Message {
     }
   }
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -2056,7 +2056,7 @@ struct IGPGroupRoom: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if _storage._igpType != .privateRoom {
         try visitor.visitSingularEnumField(value: _storage._igpType, fieldNumber: 1)
@@ -2098,89 +2098,89 @@ struct IGPGroupRoom: SwiftProtobuf.Message {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct IGPChannelRoom: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPChannelRoom"
+public struct IGPChannelRoom: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPChannelRoom"
 
-  var igpType: IGPChannelRoom.IGPType {
+  public var igpType: IGPChannelRoom.IGPType {
     get {return _storage._igpType}
     set {_uniqueStorage()._igpType = newValue}
   }
 
-  var igpRole: IGPChannelRoom.IGPRole {
+  public var igpRole: IGPChannelRoom.IGPRole {
     get {return _storage._igpRole}
     set {_uniqueStorage()._igpRole = newValue}
   }
 
-  var igpParticipantsCount: Int32 {
+  public var igpParticipantsCount: Int32 {
     get {return _storage._igpParticipantsCount}
     set {_uniqueStorage()._igpParticipantsCount = newValue}
   }
 
-  var igpParticipantsCountLabel: String {
+  public var igpParticipantsCountLabel: String {
     get {return _storage._igpParticipantsCountLabel}
     set {_uniqueStorage()._igpParticipantsCountLabel = newValue}
   }
 
-  var igpDescription: String {
+  public var igpDescription: String {
     get {return _storage._igpDescription}
     set {_uniqueStorage()._igpDescription = newValue}
   }
 
-  var igpAvatarCount: Int32 {
+  public var igpAvatarCount: Int32 {
     get {return _storage._igpAvatarCount}
     set {_uniqueStorage()._igpAvatarCount = newValue}
   }
 
-  var igpAvatar: IGPAvatar {
+  public var igpAvatar: IGPAvatar {
     get {return _storage._igpAvatar ?? IGPAvatar()}
     set {_uniqueStorage()._igpAvatar = newValue}
   }
   /// Returns true if `igpAvatar` has been explicitly set.
-  var hasIgpAvatar: Bool {return _storage._igpAvatar != nil}
+  public var hasIgpAvatar: Bool {return _storage._igpAvatar != nil}
   /// Clears the value of `igpAvatar`. Subsequent reads from it will return its default value.
-  mutating func clearIgpAvatar() {_storage._igpAvatar = nil}
+  public mutating func clearIgpAvatar() {_storage._igpAvatar = nil}
 
-  var igpPrivateExtra: IGPChannelRoom.IGPPrivateExtra {
+  public var igpPrivateExtra: IGPChannelRoom.IGPPrivateExtra {
     get {return _storage._igpPrivateExtra ?? IGPChannelRoom.IGPPrivateExtra()}
     set {_uniqueStorage()._igpPrivateExtra = newValue}
   }
   /// Returns true if `igpPrivateExtra` has been explicitly set.
-  var hasIgpPrivateExtra: Bool {return _storage._igpPrivateExtra != nil}
+  public var hasIgpPrivateExtra: Bool {return _storage._igpPrivateExtra != nil}
   /// Clears the value of `igpPrivateExtra`. Subsequent reads from it will return its default value.
-  mutating func clearIgpPrivateExtra() {_storage._igpPrivateExtra = nil}
+  public mutating func clearIgpPrivateExtra() {_storage._igpPrivateExtra = nil}
 
-  var igpPublicExtra: IGPChannelRoom.IGPPublicExtra {
+  public var igpPublicExtra: IGPChannelRoom.IGPPublicExtra {
     get {return _storage._igpPublicExtra ?? IGPChannelRoom.IGPPublicExtra()}
     set {_uniqueStorage()._igpPublicExtra = newValue}
   }
   /// Returns true if `igpPublicExtra` has been explicitly set.
-  var hasIgpPublicExtra: Bool {return _storage._igpPublicExtra != nil}
+  public var hasIgpPublicExtra: Bool {return _storage._igpPublicExtra != nil}
   /// Clears the value of `igpPublicExtra`. Subsequent reads from it will return its default value.
-  mutating func clearIgpPublicExtra() {_storage._igpPublicExtra = nil}
+  public mutating func clearIgpPublicExtra() {_storage._igpPublicExtra = nil}
 
-  var igpSignature: Bool {
+  public var igpSignature: Bool {
     get {return _storage._igpSignature}
     set {_uniqueStorage()._igpSignature = newValue}
   }
 
-  var igpSeenID: Int64 {
+  public var igpSeenID: Int64 {
     get {return _storage._igpSeenID}
     set {_uniqueStorage()._igpSeenID = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  enum IGPType: SwiftProtobuf.Enum {
-    typealias RawValue = Int
+  public enum IGPType: SwiftProtobuf.Enum {
+    public typealias RawValue = Int
     case privateRoom // = 0
     case publicRoom // = 1
     case UNRECOGNIZED(Int)
 
-    init() {
+    public init() {
       self = .privateRoom
     }
 
-    init?(rawValue: Int) {
+    public init?(rawValue: Int) {
       switch rawValue {
       case 0: self = .privateRoom
       case 1: self = .publicRoom
@@ -2188,7 +2188,7 @@ struct IGPChannelRoom: SwiftProtobuf.Message {
       }
     }
 
-    var rawValue: Int {
+    public var rawValue: Int {
       switch self {
       case .privateRoom: return 0
       case .publicRoom: return 1
@@ -2198,19 +2198,19 @@ struct IGPChannelRoom: SwiftProtobuf.Message {
 
   }
 
-  enum IGPRole: SwiftProtobuf.Enum {
-    typealias RawValue = Int
+  public enum IGPRole: SwiftProtobuf.Enum {
+    public typealias RawValue = Int
     case member // = 0
     case moderator // = 1
     case admin // = 2
     case owner // = 3
     case UNRECOGNIZED(Int)
 
-    init() {
+    public init() {
       self = .member
     }
 
-    init?(rawValue: Int) {
+    public init?(rawValue: Int) {
       switch rawValue {
       case 0: self = .member
       case 1: self = .moderator
@@ -2220,7 +2220,7 @@ struct IGPChannelRoom: SwiftProtobuf.Message {
       }
     }
 
-    var rawValue: Int {
+    public var rawValue: Int {
       switch self {
       case .member: return 0
       case .moderator: return 1
@@ -2232,22 +2232,22 @@ struct IGPChannelRoom: SwiftProtobuf.Message {
 
   }
 
-  struct IGPPrivateExtra: SwiftProtobuf.Message {
-    static let protoMessageName: String = IGPChannelRoom.protoMessageName + ".IGPPrivateExtra"
+  public struct IGPPrivateExtra: SwiftProtobuf.Message {
+    public static let protoMessageName: String = IGPChannelRoom.protoMessageName + ".IGPPrivateExtra"
 
-    var igpInviteLink: String = String()
+    public var igpInviteLink: String = String()
 
-    var igpInviteToken: String = String()
+    public var igpInviteToken: String = String()
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
 
     /// Used by the decoding initializers in the SwiftProtobuf library, not generally
     /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
     /// initializers are defined in the SwiftProtobuf library. See the Message and
     /// Message+*Additions` files.
-    mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
       while let fieldNumber = try decoder.nextFieldNumber() {
         switch fieldNumber {
         case 1: try decoder.decodeSingularStringField(value: &self.igpInviteLink)
@@ -2261,7 +2261,7 @@ struct IGPChannelRoom: SwiftProtobuf.Message {
     /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
     /// other serializer methods are defined in the SwiftProtobuf library. See the
     /// `Message` and `Message+*Additions` files.
-    func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
       if !self.igpInviteLink.isEmpty {
         try visitor.visitSingularStringField(value: self.igpInviteLink, fieldNumber: 1)
       }
@@ -2272,20 +2272,20 @@ struct IGPChannelRoom: SwiftProtobuf.Message {
     }
   }
 
-  struct IGPPublicExtra: SwiftProtobuf.Message {
-    static let protoMessageName: String = IGPChannelRoom.protoMessageName + ".IGPPublicExtra"
+  public struct IGPPublicExtra: SwiftProtobuf.Message {
+    public static let protoMessageName: String = IGPChannelRoom.protoMessageName + ".IGPPublicExtra"
 
-    var igpUsername: String = String()
+    public var igpUsername: String = String()
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
 
     /// Used by the decoding initializers in the SwiftProtobuf library, not generally
     /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
     /// initializers are defined in the SwiftProtobuf library. See the Message and
     /// Message+*Additions` files.
-    mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
       while let fieldNumber = try decoder.nextFieldNumber() {
         switch fieldNumber {
         case 1: try decoder.decodeSingularStringField(value: &self.igpUsername)
@@ -2298,7 +2298,7 @@ struct IGPChannelRoom: SwiftProtobuf.Message {
     /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
     /// other serializer methods are defined in the SwiftProtobuf library. See the
     /// `Message` and `Message+*Additions` files.
-    func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
       if !self.igpUsername.isEmpty {
         try visitor.visitSingularStringField(value: self.igpUsername, fieldNumber: 1)
       }
@@ -2306,13 +2306,13 @@ struct IGPChannelRoom: SwiftProtobuf.Message {
     }
   }
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -2338,7 +2338,7 @@ struct IGPChannelRoom: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if _storage._igpType != .privateRoom {
         try visitor.visitSingularEnumField(value: _storage._igpType, fieldNumber: 1)
@@ -2380,26 +2380,26 @@ struct IGPChannelRoom: SwiftProtobuf.Message {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct IGPThumbnail: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPThumbnail"
+public struct IGPThumbnail: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPThumbnail"
 
-  var igpSize: Int64 = 0
+  public var igpSize: Int64 = 0
 
-  var igpWidth: Int32 = 0
+  public var igpWidth: Int32 = 0
 
-  var igpHeight: Int32 = 0
+  public var igpHeight: Int32 = 0
 
-  var igpCacheID: String = String()
+  public var igpCacheID: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       switch fieldNumber {
       case 1: try decoder.decodeSingularInt64Field(value: &self.igpSize)
@@ -2415,7 +2415,7 @@ struct IGPThumbnail: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.igpSize != 0 {
       try visitor.visitSingularInt64Field(value: self.igpSize, fieldNumber: 1)
     }
@@ -2432,80 +2432,80 @@ struct IGPThumbnail: SwiftProtobuf.Message {
   }
 }
 
-struct IGPFile: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPFile"
+public struct IGPFile: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPFile"
 
-  var igpToken: String {
+  public var igpToken: String {
     get {return _storage._igpToken}
     set {_uniqueStorage()._igpToken = newValue}
   }
 
-  var igpName: String {
+  public var igpName: String {
     get {return _storage._igpName}
     set {_uniqueStorage()._igpName = newValue}
   }
 
-  var igpSize: Int64 {
+  public var igpSize: Int64 {
     get {return _storage._igpSize}
     set {_uniqueStorage()._igpSize = newValue}
   }
 
-  var igpLargeThumbnail: IGPThumbnail {
+  public var igpLargeThumbnail: IGPThumbnail {
     get {return _storage._igpLargeThumbnail ?? IGPThumbnail()}
     set {_uniqueStorage()._igpLargeThumbnail = newValue}
   }
   /// Returns true if `igpLargeThumbnail` has been explicitly set.
-  var hasIgpLargeThumbnail: Bool {return _storage._igpLargeThumbnail != nil}
+  public var hasIgpLargeThumbnail: Bool {return _storage._igpLargeThumbnail != nil}
   /// Clears the value of `igpLargeThumbnail`. Subsequent reads from it will return its default value.
-  mutating func clearIgpLargeThumbnail() {_storage._igpLargeThumbnail = nil}
+  public mutating func clearIgpLargeThumbnail() {_storage._igpLargeThumbnail = nil}
 
-  var igpSmallThumbnail: IGPThumbnail {
+  public var igpSmallThumbnail: IGPThumbnail {
     get {return _storage._igpSmallThumbnail ?? IGPThumbnail()}
     set {_uniqueStorage()._igpSmallThumbnail = newValue}
   }
   /// Returns true if `igpSmallThumbnail` has been explicitly set.
-  var hasIgpSmallThumbnail: Bool {return _storage._igpSmallThumbnail != nil}
+  public var hasIgpSmallThumbnail: Bool {return _storage._igpSmallThumbnail != nil}
   /// Clears the value of `igpSmallThumbnail`. Subsequent reads from it will return its default value.
-  mutating func clearIgpSmallThumbnail() {_storage._igpSmallThumbnail = nil}
+  public mutating func clearIgpSmallThumbnail() {_storage._igpSmallThumbnail = nil}
 
-  var igpWaveformThumbnail: IGPThumbnail {
+  public var igpWaveformThumbnail: IGPThumbnail {
     get {return _storage._igpWaveformThumbnail ?? IGPThumbnail()}
     set {_uniqueStorage()._igpWaveformThumbnail = newValue}
   }
   /// Returns true if `igpWaveformThumbnail` has been explicitly set.
-  var hasIgpWaveformThumbnail: Bool {return _storage._igpWaveformThumbnail != nil}
+  public var hasIgpWaveformThumbnail: Bool {return _storage._igpWaveformThumbnail != nil}
   /// Clears the value of `igpWaveformThumbnail`. Subsequent reads from it will return its default value.
-  mutating func clearIgpWaveformThumbnail() {_storage._igpWaveformThumbnail = nil}
+  public mutating func clearIgpWaveformThumbnail() {_storage._igpWaveformThumbnail = nil}
 
-  var igpWidth: Int32 {
+  public var igpWidth: Int32 {
     get {return _storage._igpWidth}
     set {_uniqueStorage()._igpWidth = newValue}
   }
 
-  var igpHeight: Int32 {
+  public var igpHeight: Int32 {
     get {return _storage._igpHeight}
     set {_uniqueStorage()._igpHeight = newValue}
   }
 
-  var igpDuration: Double {
+  public var igpDuration: Double {
     get {return _storage._igpDuration}
     set {_uniqueStorage()._igpDuration = newValue}
   }
 
-  var igpCacheID: String {
+  public var igpCacheID: String {
     get {return _storage._igpCacheID}
     set {_uniqueStorage()._igpCacheID = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -2530,7 +2530,7 @@ struct IGPFile: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if !_storage._igpToken.isEmpty {
         try visitor.visitSingularStringField(value: _storage._igpToken, fieldNumber: 1)
@@ -2569,32 +2569,32 @@ struct IGPFile: SwiftProtobuf.Message {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct IGPWallpaper: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPWallpaper"
+public struct IGPWallpaper: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPWallpaper"
 
-  var igpFile: IGPFile {
+  public var igpFile: IGPFile {
     get {return _storage._igpFile ?? IGPFile()}
     set {_uniqueStorage()._igpFile = newValue}
   }
   /// Returns true if `igpFile` has been explicitly set.
-  var hasIgpFile: Bool {return _storage._igpFile != nil}
+  public var hasIgpFile: Bool {return _storage._igpFile != nil}
   /// Clears the value of `igpFile`. Subsequent reads from it will return its default value.
-  mutating func clearIgpFile() {_storage._igpFile = nil}
+  public mutating func clearIgpFile() {_storage._igpFile = nil}
 
-  var igpColor: String {
+  public var igpColor: String {
     get {return _storage._igpColor}
     set {_uniqueStorage()._igpColor = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -2611,7 +2611,7 @@ struct IGPWallpaper: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._igpFile {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -2626,22 +2626,22 @@ struct IGPWallpaper: SwiftProtobuf.Message {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct IGPPagination: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPPagination"
+public struct IGPPagination: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPPagination"
 
-  var igpOffset: Int32 = 0
+  public var igpOffset: Int32 = 0
 
-  var igpLimit: Int32 = 0
+  public var igpLimit: Int32 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       switch fieldNumber {
       case 1: try decoder.decodeSingularInt32Field(value: &self.igpOffset)
@@ -2655,7 +2655,7 @@ struct IGPPagination: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.igpOffset != 0 {
       try visitor.visitSingularInt32Field(value: self.igpOffset, fieldNumber: 1)
     }
@@ -2669,7 +2669,7 @@ struct IGPPagination: SwiftProtobuf.Message {
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 extension IGPGender: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "UNKNOWN"),
     1: .same(proto: "MALE"),
     2: .same(proto: "FEMALE"),
@@ -2677,7 +2677,7 @@ extension IGPGender: SwiftProtobuf._ProtoNameProviding {
 }
 
 extension IGPDevice: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "UNKNOWN_DEVICE"),
     1: .same(proto: "PC"),
     2: .same(proto: "TABLET"),
@@ -2686,7 +2686,7 @@ extension IGPDevice: SwiftProtobuf._ProtoNameProviding {
 }
 
 extension IGPPlatform: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "UNKNOWN_PLATFORM"),
     1: .same(proto: "ANDROID"),
     2: .same(proto: "IOS"),
@@ -2698,14 +2698,14 @@ extension IGPPlatform: SwiftProtobuf._ProtoNameProviding {
 }
 
 extension IGPLanguage: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "EN_US"),
     1: .same(proto: "FA_IR"),
   ]
 }
 
 extension IGPRoomMessageType: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "TEXT"),
     1: .same(proto: "IMAGE"),
     2: .same(proto: "IMAGE_TEXT"),
@@ -2725,7 +2725,7 @@ extension IGPRoomMessageType: SwiftProtobuf._ProtoNameProviding {
 }
 
 extension IGPRoomMessageStatus: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "FAILED"),
     1: .same(proto: "SENDING"),
     2: .same(proto: "SENT"),
@@ -2736,14 +2736,14 @@ extension IGPRoomMessageStatus: SwiftProtobuf._ProtoNameProviding {
 }
 
 extension IGPRoomMessageReaction: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "THUMBS_UP"),
     1: .same(proto: "THUMBS_DOWN"),
   ]
 }
 
 extension IGPClientAction: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "CANCEL"),
     1: .same(proto: "TYPING"),
     2: .same(proto: "SENDING_IMAGE"),
@@ -2763,7 +2763,7 @@ extension IGPClientAction: SwiftProtobuf._ProtoNameProviding {
 }
 
 extension IGPPrivacyType: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "USER_STATUS"),
     1: .same(proto: "AVATAR"),
     2: .same(proto: "GROUP_INVITE"),
@@ -2776,7 +2776,7 @@ extension IGPPrivacyType: SwiftProtobuf._ProtoNameProviding {
 }
 
 extension IGPPrivacyLevel: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "ALLOW_ALL"),
     1: .same(proto: "DENY_ALL"),
     2: .same(proto: "ALLOW_CONTACTS"),
@@ -2784,12 +2784,12 @@ extension IGPPrivacyLevel: SwiftProtobuf._ProtoNameProviding {
 }
 
 extension IGPRoomMessageLocation: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_lat"),
     2: .standard(proto: "IGP_lon"),
   ]
 
-  func _protobuf_generated_isEqualTo(other: IGPRoomMessageLocation) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPRoomMessageLocation) -> Bool {
     if self.igpLat != other.igpLat {return false}
     if self.igpLon != other.igpLon {return false}
     if unknownFields != other.unknownFields {return false}
@@ -2798,7 +2798,7 @@ extension IGPRoomMessageLocation: SwiftProtobuf._MessageImplementationBase, Swif
 }
 
 extension IGPRoomMessageLog: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_type"),
     2: .standard(proto: "IGP_extra_type"),
     3: .standard(proto: "IGP_target_user"),
@@ -2827,7 +2827,7 @@ extension IGPRoomMessageLog: SwiftProtobuf._MessageImplementationBase, SwiftProt
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPRoomMessageLog) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPRoomMessageLog) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -2845,7 +2845,7 @@ extension IGPRoomMessageLog: SwiftProtobuf._MessageImplementationBase, SwiftProt
 }
 
 extension IGPRoomMessageLog.IGPType: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "USER_JOINED"),
     1: .same(proto: "USER_DELETED"),
     2: .same(proto: "ROOM_CREATED"),
@@ -2864,18 +2864,18 @@ extension IGPRoomMessageLog.IGPType: SwiftProtobuf._ProtoNameProviding {
 }
 
 extension IGPRoomMessageLog.IGPExtraType: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "NO_EXTRA"),
     1: .same(proto: "TARGET_USER"),
   ]
 }
 
 extension IGPRoomMessageLog.IGPTargetUser: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_id"),
   ]
 
-  func _protobuf_generated_isEqualTo(other: IGPRoomMessageLog.IGPTargetUser) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPRoomMessageLog.IGPTargetUser) -> Bool {
     if self.igpID != other.igpID {return false}
     if unknownFields != other.unknownFields {return false}
     return true
@@ -2883,7 +2883,7 @@ extension IGPRoomMessageLog.IGPTargetUser: SwiftProtobuf._MessageImplementationB
 }
 
 extension IGPRoomMessageContact: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_first_name"),
     2: .standard(proto: "IGP_last_name"),
     3: .standard(proto: "IGP_nickname"),
@@ -2891,7 +2891,7 @@ extension IGPRoomMessageContact: SwiftProtobuf._MessageImplementationBase, Swift
     5: .standard(proto: "IGP_email"),
   ]
 
-  func _protobuf_generated_isEqualTo(other: IGPRoomMessageContact) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPRoomMessageContact) -> Bool {
     if self.igpFirstName != other.igpFirstName {return false}
     if self.igpLastName != other.igpLastName {return false}
     if self.igpNickname != other.igpNickname {return false}
@@ -2903,12 +2903,12 @@ extension IGPRoomMessageContact: SwiftProtobuf._MessageImplementationBase, Swift
 }
 
 extension IGPRoomMessageForwardFrom: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_room_id"),
     2: .standard(proto: "IGP_message_id"),
   ]
 
-  func _protobuf_generated_isEqualTo(other: IGPRoomMessageForwardFrom) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPRoomMessageForwardFrom) -> Bool {
     if self.igpRoomID != other.igpRoomID {return false}
     if self.igpMessageID != other.igpMessageID {return false}
     if unknownFields != other.unknownFields {return false}
@@ -2917,7 +2917,7 @@ extension IGPRoomMessageForwardFrom: SwiftProtobuf._MessageImplementationBase, S
 }
 
 extension IGPRegisteredUser: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_id"),
     2: .standard(proto: "IGP_username"),
     3: .standard(proto: "IGP_phone"),
@@ -2982,7 +2982,7 @@ extension IGPRegisteredUser: SwiftProtobuf._MessageImplementationBase, SwiftProt
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPRegisteredUser) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPRegisteredUser) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -3012,7 +3012,7 @@ extension IGPRegisteredUser: SwiftProtobuf._MessageImplementationBase, SwiftProt
 }
 
 extension IGPRegisteredUser.IGPStatus: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "LONG_TIME_AGO"),
     1: .same(proto: "LAST_MONTH"),
     2: .same(proto: "LAST_WEEK"),
@@ -3025,7 +3025,7 @@ extension IGPRegisteredUser.IGPStatus: SwiftProtobuf._ProtoNameProviding {
 }
 
 extension IGPAvatar: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_id"),
     2: .standard(proto: "IGP_file"),
   ]
@@ -3051,7 +3051,7 @@ extension IGPAvatar: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._Pr
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPAvatar) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPAvatar) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -3068,7 +3068,7 @@ extension IGPAvatar: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._Pr
 }
 
 extension IGPRoomMessage: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_message_id"),
     2: .standard(proto: "IGP_message_version"),
     3: .standard(proto: "IGP_status"),
@@ -3148,7 +3148,7 @@ extension IGPRoomMessage: SwiftProtobuf._MessageImplementationBase, SwiftProtobu
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPRoomMessage) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPRoomMessage) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -3183,14 +3183,14 @@ extension IGPRoomMessage: SwiftProtobuf._MessageImplementationBase, SwiftProtobu
 }
 
 extension IGPRoomMessage.IGPExtraType: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "NO_EXTRA"),
     1: .same(proto: "CHANNEL_EXTRA"),
   ]
 }
 
 extension IGPRoomMessage.IGPAuthor: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_hash"),
     2: .standard(proto: "IGP_user"),
     3: .standard(proto: "IGP_room"),
@@ -3219,7 +3219,7 @@ extension IGPRoomMessage.IGPAuthor: SwiftProtobuf._MessageImplementationBase, Sw
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPRoomMessage.IGPAuthor) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPRoomMessage.IGPAuthor) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -3237,12 +3237,12 @@ extension IGPRoomMessage.IGPAuthor: SwiftProtobuf._MessageImplementationBase, Sw
 }
 
 extension IGPRoomMessage.IGPAuthor.IGPUser: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_user_id"),
     2: .standard(proto: "IGP_cache_id"),
   ]
 
-  func _protobuf_generated_isEqualTo(other: IGPRoomMessage.IGPAuthor.IGPUser) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPRoomMessage.IGPAuthor.IGPUser) -> Bool {
     if self.igpUserID != other.igpUserID {return false}
     if self.igpCacheID != other.igpCacheID {return false}
     if unknownFields != other.unknownFields {return false}
@@ -3251,11 +3251,11 @@ extension IGPRoomMessage.IGPAuthor.IGPUser: SwiftProtobuf._MessageImplementation
 }
 
 extension IGPRoomMessage.IGPAuthor.IGPRoom: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_room_id"),
   ]
 
-  func _protobuf_generated_isEqualTo(other: IGPRoomMessage.IGPAuthor.IGPRoom) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPRoomMessage.IGPAuthor.IGPRoom) -> Bool {
     if self.igpRoomID != other.igpRoomID {return false}
     if unknownFields != other.unknownFields {return false}
     return true
@@ -3263,14 +3263,14 @@ extension IGPRoomMessage.IGPAuthor.IGPRoom: SwiftProtobuf._MessageImplementation
 }
 
 extension IGPRoomMessage.IGPChannelExtra: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_signature"),
     2: .standard(proto: "IGP_views_label"),
     3: .standard(proto: "IGP_thumbs_up_label"),
     4: .standard(proto: "IGP_thumbs_down_label"),
   ]
 
-  func _protobuf_generated_isEqualTo(other: IGPRoomMessage.IGPChannelExtra) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPRoomMessage.IGPChannelExtra) -> Bool {
     if self.igpSignature != other.igpSignature {return false}
     if self.igpViewsLabel != other.igpViewsLabel {return false}
     if self.igpThumbsUpLabel != other.igpThumbsUpLabel {return false}
@@ -3281,12 +3281,12 @@ extension IGPRoomMessage.IGPChannelExtra: SwiftProtobuf._MessageImplementationBa
 }
 
 extension IGPRoomDraft: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_message"),
     2: .standard(proto: "IGP_reply_to"),
   ]
 
-  func _protobuf_generated_isEqualTo(other: IGPRoomDraft) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPRoomDraft) -> Bool {
     if self.igpMessage != other.igpMessage {return false}
     if self.igpReplyTo != other.igpReplyTo {return false}
     if unknownFields != other.unknownFields {return false}
@@ -3295,7 +3295,7 @@ extension IGPRoomDraft: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf.
 }
 
 extension IGPRoom: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_id"),
     2: .standard(proto: "IGP_type"),
     3: .standard(proto: "IGP_title"),
@@ -3357,7 +3357,7 @@ extension IGPRoom: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._Prot
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPRoom) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPRoom) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -3386,7 +3386,7 @@ extension IGPRoom: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._Prot
 }
 
 extension IGPRoom.IGPType: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "CHAT"),
     1: .same(proto: "GROUP"),
     2: .same(proto: "CHANNEL"),
@@ -3394,7 +3394,7 @@ extension IGPRoom.IGPType: SwiftProtobuf._ProtoNameProviding {
 }
 
 extension IGPChatRoom: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_peer"),
   ]
 
@@ -3417,7 +3417,7 @@ extension IGPChatRoom: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPChatRoom) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPChatRoom) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -3433,7 +3433,7 @@ extension IGPChatRoom: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._
 }
 
 extension IGPGroupRoom: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_type"),
     2: .standard(proto: "IGP_role"),
     3: .standard(proto: "IGP_participants_count"),
@@ -3486,7 +3486,7 @@ extension IGPGroupRoom: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf.
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPGroupRoom) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPGroupRoom) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -3512,14 +3512,14 @@ extension IGPGroupRoom: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf.
 }
 
 extension IGPGroupRoom.IGPType: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "PRIVATE_ROOM"),
     1: .same(proto: "PUBLIC_ROOM"),
   ]
 }
 
 extension IGPGroupRoom.IGPRole: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "MEMBER"),
     1: .same(proto: "MODERATOR"),
     2: .same(proto: "ADMIN"),
@@ -3528,12 +3528,12 @@ extension IGPGroupRoom.IGPRole: SwiftProtobuf._ProtoNameProviding {
 }
 
 extension IGPGroupRoom.IGPPrivateExtra: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_invite_link"),
     2: .standard(proto: "IGP_invite_token"),
   ]
 
-  func _protobuf_generated_isEqualTo(other: IGPGroupRoom.IGPPrivateExtra) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPGroupRoom.IGPPrivateExtra) -> Bool {
     if self.igpInviteLink != other.igpInviteLink {return false}
     if self.igpInviteToken != other.igpInviteToken {return false}
     if unknownFields != other.unknownFields {return false}
@@ -3542,11 +3542,11 @@ extension IGPGroupRoom.IGPPrivateExtra: SwiftProtobuf._MessageImplementationBase
 }
 
 extension IGPGroupRoom.IGPPublicExtra: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_username"),
   ]
 
-  func _protobuf_generated_isEqualTo(other: IGPGroupRoom.IGPPublicExtra) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPGroupRoom.IGPPublicExtra) -> Bool {
     if self.igpUsername != other.igpUsername {return false}
     if unknownFields != other.unknownFields {return false}
     return true
@@ -3554,7 +3554,7 @@ extension IGPGroupRoom.IGPPublicExtra: SwiftProtobuf._MessageImplementationBase,
 }
 
 extension IGPChannelRoom: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_type"),
     2: .standard(proto: "IGP_role"),
     3: .standard(proto: "IGP_participants_count"),
@@ -3607,7 +3607,7 @@ extension IGPChannelRoom: SwiftProtobuf._MessageImplementationBase, SwiftProtobu
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPChannelRoom) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPChannelRoom) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -3633,14 +3633,14 @@ extension IGPChannelRoom: SwiftProtobuf._MessageImplementationBase, SwiftProtobu
 }
 
 extension IGPChannelRoom.IGPType: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "PRIVATE_ROOM"),
     1: .same(proto: "PUBLIC_ROOM"),
   ]
 }
 
 extension IGPChannelRoom.IGPRole: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "MEMBER"),
     1: .same(proto: "MODERATOR"),
     2: .same(proto: "ADMIN"),
@@ -3649,12 +3649,12 @@ extension IGPChannelRoom.IGPRole: SwiftProtobuf._ProtoNameProviding {
 }
 
 extension IGPChannelRoom.IGPPrivateExtra: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_invite_link"),
     2: .standard(proto: "IGP_invite_token"),
   ]
 
-  func _protobuf_generated_isEqualTo(other: IGPChannelRoom.IGPPrivateExtra) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPChannelRoom.IGPPrivateExtra) -> Bool {
     if self.igpInviteLink != other.igpInviteLink {return false}
     if self.igpInviteToken != other.igpInviteToken {return false}
     if unknownFields != other.unknownFields {return false}
@@ -3663,11 +3663,11 @@ extension IGPChannelRoom.IGPPrivateExtra: SwiftProtobuf._MessageImplementationBa
 }
 
 extension IGPChannelRoom.IGPPublicExtra: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_username"),
   ]
 
-  func _protobuf_generated_isEqualTo(other: IGPChannelRoom.IGPPublicExtra) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPChannelRoom.IGPPublicExtra) -> Bool {
     if self.igpUsername != other.igpUsername {return false}
     if unknownFields != other.unknownFields {return false}
     return true
@@ -3675,14 +3675,14 @@ extension IGPChannelRoom.IGPPublicExtra: SwiftProtobuf._MessageImplementationBas
 }
 
 extension IGPThumbnail: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_size"),
     2: .standard(proto: "IGP_width"),
     3: .standard(proto: "IGP_height"),
     4: .standard(proto: "IGP_cache_id"),
   ]
 
-  func _protobuf_generated_isEqualTo(other: IGPThumbnail) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPThumbnail) -> Bool {
     if self.igpSize != other.igpSize {return false}
     if self.igpWidth != other.igpWidth {return false}
     if self.igpHeight != other.igpHeight {return false}
@@ -3693,7 +3693,7 @@ extension IGPThumbnail: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf.
 }
 
 extension IGPFile: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_token"),
     2: .standard(proto: "IGP_name"),
     3: .standard(proto: "IGP_size"),
@@ -3743,7 +3743,7 @@ extension IGPFile: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._Prot
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPFile) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPFile) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -3768,7 +3768,7 @@ extension IGPFile: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._Prot
 }
 
 extension IGPWallpaper: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_file"),
     2: .standard(proto: "IGP_color"),
   ]
@@ -3794,7 +3794,7 @@ extension IGPWallpaper: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf.
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPWallpaper) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPWallpaper) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -3811,12 +3811,12 @@ extension IGPWallpaper: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf.
 }
 
 extension IGPPagination: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_offset"),
     2: .standard(proto: "IGP_limit"),
   ]
 
-  func _protobuf_generated_isEqualTo(other: IGPPagination) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPPagination) -> Bool {
     if self.igpOffset != other.igpOffset {return false}
     if self.igpLimit != other.igpLimit {return false}
     if unknownFields != other.unknownFields {return false}

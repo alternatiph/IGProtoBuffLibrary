@@ -19,32 +19,32 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct IGPClientSearchUsername: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPClientSearchUsername"
+public struct IGPClientSearchUsername: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPClientSearchUsername"
 
-  var igpRequest: IGPRequest {
+  public var igpRequest: IGPRequest {
     get {return _storage._igpRequest ?? IGPRequest()}
     set {_uniqueStorage()._igpRequest = newValue}
   }
   /// Returns true if `igpRequest` has been explicitly set.
-  var hasIgpRequest: Bool {return _storage._igpRequest != nil}
+  public var hasIgpRequest: Bool {return _storage._igpRequest != nil}
   /// Clears the value of `igpRequest`. Subsequent reads from it will return its default value.
-  mutating func clearIgpRequest() {_storage._igpRequest = nil}
+  public mutating func clearIgpRequest() {_storage._igpRequest = nil}
 
-  var igpQuery: String {
+  public var igpQuery: String {
     get {return _storage._igpQuery}
     set {_uniqueStorage()._igpQuery = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -61,7 +61,7 @@ struct IGPClientSearchUsername: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._igpRequest {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -76,69 +76,69 @@ struct IGPClientSearchUsername: SwiftProtobuf.Message {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct IGPClientSearchUsernameResponse: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPClientSearchUsernameResponse"
+public struct IGPClientSearchUsernameResponse: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPClientSearchUsernameResponse"
 
-  var igpResponse: IGPResponse {
+  public var igpResponse: IGPResponse {
     get {return _storage._igpResponse ?? IGPResponse()}
     set {_uniqueStorage()._igpResponse = newValue}
   }
   /// Returns true if `igpResponse` has been explicitly set.
-  var hasIgpResponse: Bool {return _storage._igpResponse != nil}
+  public var hasIgpResponse: Bool {return _storage._igpResponse != nil}
   /// Clears the value of `igpResponse`. Subsequent reads from it will return its default value.
-  mutating func clearIgpResponse() {_storage._igpResponse = nil}
+  public mutating func clearIgpResponse() {_storage._igpResponse = nil}
 
-  var igpResult: [IGPClientSearchUsernameResponse.IGPResult] {
+  public var igpResult: [IGPClientSearchUsernameResponse.IGPResult] {
     get {return _storage._igpResult}
     set {_uniqueStorage()._igpResult = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  struct IGPResult: SwiftProtobuf.Message {
-    static let protoMessageName: String = IGPClientSearchUsernameResponse.protoMessageName + ".IGPResult"
+  public struct IGPResult: SwiftProtobuf.Message {
+    public static let protoMessageName: String = IGPClientSearchUsernameResponse.protoMessageName + ".IGPResult"
 
-    var igpType: IGPClientSearchUsernameResponse.IGPResult.IGPType {
+    public var igpType: IGPClientSearchUsernameResponse.IGPResult.IGPType {
       get {return _storage._igpType}
       set {_uniqueStorage()._igpType = newValue}
     }
 
-    var igpExactMatch: Bool {
+    public var igpExactMatch: Bool {
       get {return _storage._igpExactMatch}
       set {_uniqueStorage()._igpExactMatch = newValue}
     }
 
-    var igpUser: IGPRegisteredUser {
+    public var igpUser: IGPRegisteredUser {
       get {return _storage._igpUser ?? IGPRegisteredUser()}
       set {_uniqueStorage()._igpUser = newValue}
     }
     /// Returns true if `igpUser` has been explicitly set.
-    var hasIgpUser: Bool {return _storage._igpUser != nil}
+    public var hasIgpUser: Bool {return _storage._igpUser != nil}
     /// Clears the value of `igpUser`. Subsequent reads from it will return its default value.
-    mutating func clearIgpUser() {_storage._igpUser = nil}
+    public mutating func clearIgpUser() {_storage._igpUser = nil}
 
-    var igpRoom: IGPRoom {
+    public var igpRoom: IGPRoom {
       get {return _storage._igpRoom ?? IGPRoom()}
       set {_uniqueStorage()._igpRoom = newValue}
     }
     /// Returns true if `igpRoom` has been explicitly set.
-    var hasIgpRoom: Bool {return _storage._igpRoom != nil}
+    public var hasIgpRoom: Bool {return _storage._igpRoom != nil}
     /// Clears the value of `igpRoom`. Subsequent reads from it will return its default value.
-    mutating func clearIgpRoom() {_storage._igpRoom = nil}
+    public mutating func clearIgpRoom() {_storage._igpRoom = nil}
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    enum IGPType: SwiftProtobuf.Enum {
-      typealias RawValue = Int
+    public enum IGPType: SwiftProtobuf.Enum {
+      public typealias RawValue = Int
       case user // = 0
       case room // = 1
       case UNRECOGNIZED(Int)
 
-      init() {
+      public init() {
         self = .user
       }
 
-      init?(rawValue: Int) {
+      public init?(rawValue: Int) {
         switch rawValue {
         case 0: self = .user
         case 1: self = .room
@@ -146,7 +146,7 @@ struct IGPClientSearchUsernameResponse: SwiftProtobuf.Message {
         }
       }
 
-      var rawValue: Int {
+      public var rawValue: Int {
         switch self {
         case .user: return 0
         case .room: return 1
@@ -156,13 +156,13 @@ struct IGPClientSearchUsernameResponse: SwiftProtobuf.Message {
 
     }
 
-    init() {}
+    public init() {}
 
     /// Used by the decoding initializers in the SwiftProtobuf library, not generally
     /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
     /// initializers are defined in the SwiftProtobuf library. See the Message and
     /// Message+*Additions` files.
-    mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
       _ = _uniqueStorage()
       try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
         while let fieldNumber = try decoder.nextFieldNumber() {
@@ -181,7 +181,7 @@ struct IGPClientSearchUsernameResponse: SwiftProtobuf.Message {
     /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
     /// other serializer methods are defined in the SwiftProtobuf library. See the
     /// `Message` and `Message+*Additions` files.
-    func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
       try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
         if _storage._igpType != .user {
           try visitor.visitSingularEnumField(value: _storage._igpType, fieldNumber: 1)
@@ -202,13 +202,13 @@ struct IGPClientSearchUsernameResponse: SwiftProtobuf.Message {
     fileprivate var _storage = _StorageClass.defaultInstance
   }
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -225,7 +225,7 @@ struct IGPClientSearchUsernameResponse: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._igpResponse {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -243,7 +243,7 @@ struct IGPClientSearchUsernameResponse: SwiftProtobuf.Message {
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 extension IGPClientSearchUsername: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_request"),
     2: .standard(proto: "IGP_query"),
   ]
@@ -269,7 +269,7 @@ extension IGPClientSearchUsername: SwiftProtobuf._MessageImplementationBase, Swi
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPClientSearchUsername) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPClientSearchUsername) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -286,7 +286,7 @@ extension IGPClientSearchUsername: SwiftProtobuf._MessageImplementationBase, Swi
 }
 
 extension IGPClientSearchUsernameResponse: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_response"),
     2: .standard(proto: "IGP_result"),
   ]
@@ -312,7 +312,7 @@ extension IGPClientSearchUsernameResponse: SwiftProtobuf._MessageImplementationB
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPClientSearchUsernameResponse) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPClientSearchUsernameResponse) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -329,7 +329,7 @@ extension IGPClientSearchUsernameResponse: SwiftProtobuf._MessageImplementationB
 }
 
 extension IGPClientSearchUsernameResponse.IGPResult: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_type"),
     2: .standard(proto: "IGP_exact_match"),
     3: .standard(proto: "IGP_user"),
@@ -361,7 +361,7 @@ extension IGPClientSearchUsernameResponse.IGPResult: SwiftProtobuf._MessageImple
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPClientSearchUsernameResponse.IGPResult) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPClientSearchUsernameResponse.IGPResult) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -380,7 +380,7 @@ extension IGPClientSearchUsernameResponse.IGPResult: SwiftProtobuf._MessageImple
 }
 
 extension IGPClientSearchUsernameResponse.IGPResult.IGPType: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "USER"),
     1: .same(proto: "ROOM"),
   ]

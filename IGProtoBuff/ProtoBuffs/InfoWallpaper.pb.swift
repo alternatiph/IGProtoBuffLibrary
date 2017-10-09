@@ -19,37 +19,37 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct IGPInfoWallpaper: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPInfoWallpaper"
+public struct IGPInfoWallpaper: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPInfoWallpaper"
 
-  var igpRequest: IGPRequest {
+  public var igpRequest: IGPRequest {
     get {return _storage._igpRequest ?? IGPRequest()}
     set {_uniqueStorage()._igpRequest = newValue}
   }
   /// Returns true if `igpRequest` has been explicitly set.
-  var hasIgpRequest: Bool {return _storage._igpRequest != nil}
+  public var hasIgpRequest: Bool {return _storage._igpRequest != nil}
   /// Clears the value of `igpRequest`. Subsequent reads from it will return its default value.
-  mutating func clearIgpRequest() {_storage._igpRequest = nil}
+  public mutating func clearIgpRequest() {_storage._igpRequest = nil}
 
-  var igpFit: IGPInfoWallpaper.IGPFit {
+  public var igpFit: IGPInfoWallpaper.IGPFit {
     get {return _storage._igpFit}
     set {_uniqueStorage()._igpFit = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  enum IGPFit: SwiftProtobuf.Enum {
-    typealias RawValue = Int
+  public enum IGPFit: SwiftProtobuf.Enum {
+    public typealias RawValue = Int
     case phone // = 0
     case tablet // = 1
     case desktop // = 2
     case UNRECOGNIZED(Int)
 
-    init() {
+    public init() {
       self = .phone
     }
 
-    init?(rawValue: Int) {
+    public init?(rawValue: Int) {
       switch rawValue {
       case 0: self = .phone
       case 1: self = .tablet
@@ -58,7 +58,7 @@ struct IGPInfoWallpaper: SwiftProtobuf.Message {
       }
     }
 
-    var rawValue: Int {
+    public var rawValue: Int {
       switch self {
       case .phone: return 0
       case .tablet: return 1
@@ -69,13 +69,13 @@ struct IGPInfoWallpaper: SwiftProtobuf.Message {
 
   }
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -92,7 +92,7 @@ struct IGPInfoWallpaper: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._igpRequest {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -107,32 +107,32 @@ struct IGPInfoWallpaper: SwiftProtobuf.Message {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct IGPInfoWallpaperResponse: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPInfoWallpaperResponse"
+public struct IGPInfoWallpaperResponse: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPInfoWallpaperResponse"
 
-  var igpResponse: IGPResponse {
+  public var igpResponse: IGPResponse {
     get {return _storage._igpResponse ?? IGPResponse()}
     set {_uniqueStorage()._igpResponse = newValue}
   }
   /// Returns true if `igpResponse` has been explicitly set.
-  var hasIgpResponse: Bool {return _storage._igpResponse != nil}
+  public var hasIgpResponse: Bool {return _storage._igpResponse != nil}
   /// Clears the value of `igpResponse`. Subsequent reads from it will return its default value.
-  mutating func clearIgpResponse() {_storage._igpResponse = nil}
+  public mutating func clearIgpResponse() {_storage._igpResponse = nil}
 
-  var igpWallpaper: [IGPWallpaper] {
+  public var igpWallpaper: [IGPWallpaper] {
     get {return _storage._igpWallpaper}
     set {_uniqueStorage()._igpWallpaper = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -149,7 +149,7 @@ struct IGPInfoWallpaperResponse: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._igpResponse {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -167,7 +167,7 @@ struct IGPInfoWallpaperResponse: SwiftProtobuf.Message {
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 extension IGPInfoWallpaper: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_request"),
     2: .standard(proto: "IGP_fit"),
   ]
@@ -193,7 +193,7 @@ extension IGPInfoWallpaper: SwiftProtobuf._MessageImplementationBase, SwiftProto
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPInfoWallpaper) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPInfoWallpaper) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -210,7 +210,7 @@ extension IGPInfoWallpaper: SwiftProtobuf._MessageImplementationBase, SwiftProto
 }
 
 extension IGPInfoWallpaper.IGPFit: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "PHONE"),
     1: .same(proto: "TABLET"),
     2: .same(proto: "DESKTOP"),
@@ -218,7 +218,7 @@ extension IGPInfoWallpaper.IGPFit: SwiftProtobuf._ProtoNameProviding {
 }
 
 extension IGPInfoWallpaperResponse: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_response"),
     2: .standard(proto: "IGP_wallpaper"),
   ]
@@ -244,7 +244,7 @@ extension IGPInfoWallpaperResponse: SwiftProtobuf._MessageImplementationBase, Sw
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPInfoWallpaperResponse) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPInfoWallpaperResponse) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0

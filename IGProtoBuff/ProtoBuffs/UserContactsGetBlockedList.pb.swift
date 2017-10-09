@@ -19,27 +19,27 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct IGPUserContactsGetBlockedList: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPUserContactsGetBlockedList"
+public struct IGPUserContactsGetBlockedList: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPUserContactsGetBlockedList"
 
-  var igpRequest: IGPRequest {
+  public var igpRequest: IGPRequest {
     get {return _storage._igpRequest ?? IGPRequest()}
     set {_uniqueStorage()._igpRequest = newValue}
   }
   /// Returns true if `igpRequest` has been explicitly set.
-  var hasIgpRequest: Bool {return _storage._igpRequest != nil}
+  public var hasIgpRequest: Bool {return _storage._igpRequest != nil}
   /// Clears the value of `igpRequest`. Subsequent reads from it will return its default value.
-  mutating func clearIgpRequest() {_storage._igpRequest = nil}
+  public mutating func clearIgpRequest() {_storage._igpRequest = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -55,7 +55,7 @@ struct IGPUserContactsGetBlockedList: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._igpRequest {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -67,39 +67,39 @@ struct IGPUserContactsGetBlockedList: SwiftProtobuf.Message {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct IGPUserContactsGetBlockedListResponse: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPUserContactsGetBlockedListResponse"
+public struct IGPUserContactsGetBlockedListResponse: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPUserContactsGetBlockedListResponse"
 
-  var igpResponse: IGPResponse {
+  public var igpResponse: IGPResponse {
     get {return _storage._igpResponse ?? IGPResponse()}
     set {_uniqueStorage()._igpResponse = newValue}
   }
   /// Returns true if `igpResponse` has been explicitly set.
-  var hasIgpResponse: Bool {return _storage._igpResponse != nil}
+  public var hasIgpResponse: Bool {return _storage._igpResponse != nil}
   /// Clears the value of `igpResponse`. Subsequent reads from it will return its default value.
-  mutating func clearIgpResponse() {_storage._igpResponse = nil}
+  public mutating func clearIgpResponse() {_storage._igpResponse = nil}
 
-  var igpUser: [IGPUserContactsGetBlockedListResponse.IGPUser] {
+  public var igpUser: [IGPUserContactsGetBlockedListResponse.IGPUser] {
     get {return _storage._igpUser}
     set {_uniqueStorage()._igpUser = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  struct IGPUser: SwiftProtobuf.Message {
-    static let protoMessageName: String = IGPUserContactsGetBlockedListResponse.protoMessageName + ".IGPUser"
+  public struct IGPUser: SwiftProtobuf.Message {
+    public static let protoMessageName: String = IGPUserContactsGetBlockedListResponse.protoMessageName + ".IGPUser"
 
-    var igpUserID: Int64 = 0
+    public var igpUserID: Int64 = 0
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
 
     /// Used by the decoding initializers in the SwiftProtobuf library, not generally
     /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
     /// initializers are defined in the SwiftProtobuf library. See the Message and
     /// Message+*Additions` files.
-    mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
       while let fieldNumber = try decoder.nextFieldNumber() {
         switch fieldNumber {
         case 1: try decoder.decodeSingularInt64Field(value: &self.igpUserID)
@@ -112,7 +112,7 @@ struct IGPUserContactsGetBlockedListResponse: SwiftProtobuf.Message {
     /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
     /// other serializer methods are defined in the SwiftProtobuf library. See the
     /// `Message` and `Message+*Additions` files.
-    func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
       if self.igpUserID != 0 {
         try visitor.visitSingularInt64Field(value: self.igpUserID, fieldNumber: 1)
       }
@@ -120,13 +120,13 @@ struct IGPUserContactsGetBlockedListResponse: SwiftProtobuf.Message {
     }
   }
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -143,7 +143,7 @@ struct IGPUserContactsGetBlockedListResponse: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._igpResponse {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -161,7 +161,7 @@ struct IGPUserContactsGetBlockedListResponse: SwiftProtobuf.Message {
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 extension IGPUserContactsGetBlockedList: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_request"),
   ]
 
@@ -184,7 +184,7 @@ extension IGPUserContactsGetBlockedList: SwiftProtobuf._MessageImplementationBas
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPUserContactsGetBlockedList) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPUserContactsGetBlockedList) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -200,7 +200,7 @@ extension IGPUserContactsGetBlockedList: SwiftProtobuf._MessageImplementationBas
 }
 
 extension IGPUserContactsGetBlockedListResponse: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_response"),
     2: .standard(proto: "IGP_user"),
   ]
@@ -226,7 +226,7 @@ extension IGPUserContactsGetBlockedListResponse: SwiftProtobuf._MessageImplement
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPUserContactsGetBlockedListResponse) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPUserContactsGetBlockedListResponse) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -243,11 +243,11 @@ extension IGPUserContactsGetBlockedListResponse: SwiftProtobuf._MessageImplement
 }
 
 extension IGPUserContactsGetBlockedListResponse.IGPUser: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_user_id"),
   ]
 
-  func _protobuf_generated_isEqualTo(other: IGPUserContactsGetBlockedListResponse.IGPUser) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPUserContactsGetBlockedListResponse.IGPUser) -> Bool {
     if self.igpUserID != other.igpUserID {return false}
     if unknownFields != other.unknownFields {return false}
     return true

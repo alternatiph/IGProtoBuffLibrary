@@ -19,20 +19,20 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct IGPRequest: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPRequest"
+public struct IGPRequest: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPRequest"
 
-  var igpID: String = String()
+  public var igpID: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       switch fieldNumber {
       case 1: try decoder.decodeSingularStringField(value: &self.igpID)
@@ -45,7 +45,7 @@ struct IGPRequest: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.igpID.isEmpty {
       try visitor.visitSingularStringField(value: self.igpID, fieldNumber: 1)
     }
@@ -56,11 +56,11 @@ struct IGPRequest: SwiftProtobuf.Message {
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 extension IGPRequest: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_id"),
   ]
 
-  func _protobuf_generated_isEqualTo(other: IGPRequest) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPRequest) -> Bool {
     if self.igpID != other.igpID {return false}
     if unknownFields != other.unknownFields {return false}
     return true

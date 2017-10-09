@@ -19,53 +19,53 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct IGPFileDownload: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPFileDownload"
+public struct IGPFileDownload: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPFileDownload"
 
-  var igpRequest: IGPRequest {
+  public var igpRequest: IGPRequest {
     get {return _storage._igpRequest ?? IGPRequest()}
     set {_uniqueStorage()._igpRequest = newValue}
   }
   /// Returns true if `igpRequest` has been explicitly set.
-  var hasIgpRequest: Bool {return _storage._igpRequest != nil}
+  public var hasIgpRequest: Bool {return _storage._igpRequest != nil}
   /// Clears the value of `igpRequest`. Subsequent reads from it will return its default value.
-  mutating func clearIgpRequest() {_storage._igpRequest = nil}
+  public mutating func clearIgpRequest() {_storage._igpRequest = nil}
 
-  var igpToken: String {
+  public var igpToken: String {
     get {return _storage._igpToken}
     set {_uniqueStorage()._igpToken = newValue}
   }
 
-  var igpOffset: Int64 {
+  public var igpOffset: Int64 {
     get {return _storage._igpOffset}
     set {_uniqueStorage()._igpOffset = newValue}
   }
 
-  var igpMaxLimit: Int32 {
+  public var igpMaxLimit: Int32 {
     get {return _storage._igpMaxLimit}
     set {_uniqueStorage()._igpMaxLimit = newValue}
   }
 
-  var igpSelector: IGPFileDownload.IGPSelector {
+  public var igpSelector: IGPFileDownload.IGPSelector {
     get {return _storage._igpSelector}
     set {_uniqueStorage()._igpSelector = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  enum IGPSelector: SwiftProtobuf.Enum {
-    typealias RawValue = Int
+  public enum IGPSelector: SwiftProtobuf.Enum {
+    public typealias RawValue = Int
     case file // = 0
     case smallThumbnail // = 1
     case largeThumbnail // = 2
     case waveformThumbnail // = 3
     case UNRECOGNIZED(Int)
 
-    init() {
+    public init() {
       self = .file
     }
 
-    init?(rawValue: Int) {
+    public init?(rawValue: Int) {
       switch rawValue {
       case 0: self = .file
       case 1: self = .smallThumbnail
@@ -75,7 +75,7 @@ struct IGPFileDownload: SwiftProtobuf.Message {
       }
     }
 
-    var rawValue: Int {
+    public var rawValue: Int {
       switch self {
       case .file: return 0
       case .smallThumbnail: return 1
@@ -87,13 +87,13 @@ struct IGPFileDownload: SwiftProtobuf.Message {
 
   }
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -113,7 +113,7 @@ struct IGPFileDownload: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._igpRequest {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -137,32 +137,32 @@ struct IGPFileDownload: SwiftProtobuf.Message {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct IGPFileDownloadResponse: SwiftProtobuf.Message {
-  static let protoMessageName: String = "IGPFileDownloadResponse"
+public struct IGPFileDownloadResponse: SwiftProtobuf.Message {
+  public static let protoMessageName: String = "IGPFileDownloadResponse"
 
-  var igpResponse: IGPResponse {
+  public var igpResponse: IGPResponse {
     get {return _storage._igpResponse ?? IGPResponse()}
     set {_uniqueStorage()._igpResponse = newValue}
   }
   /// Returns true if `igpResponse` has been explicitly set.
-  var hasIgpResponse: Bool {return _storage._igpResponse != nil}
+  public var hasIgpResponse: Bool {return _storage._igpResponse != nil}
   /// Clears the value of `igpResponse`. Subsequent reads from it will return its default value.
-  mutating func clearIgpResponse() {_storage._igpResponse = nil}
+  public mutating func clearIgpResponse() {_storage._igpResponse = nil}
 
-  var igpBytes: Data {
+  public var igpBytes: Data {
     get {return _storage._igpBytes}
     set {_uniqueStorage()._igpBytes = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   /// Used by the decoding initializers in the SwiftProtobuf library, not generally
   /// used directly. `init(serializedData:)`, `init(jsonUTF8Data:)`, and other decoding
   /// initializers are defined in the SwiftProtobuf library. See the Message and
   /// Message+*Additions` files.
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -179,7 +179,7 @@ struct IGPFileDownloadResponse: SwiftProtobuf.Message {
   /// used directly. `Message.serializedData()`, `Message.jsonUTF8Data()`, and
   /// other serializer methods are defined in the SwiftProtobuf library. See the
   /// `Message` and `Message+*Additions` files.
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._igpResponse {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -197,7 +197,7 @@ struct IGPFileDownloadResponse: SwiftProtobuf.Message {
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 extension IGPFileDownload: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_request"),
     2: .standard(proto: "IGP_token"),
     3: .standard(proto: "IGP_offset"),
@@ -232,7 +232,7 @@ extension IGPFileDownload: SwiftProtobuf._MessageImplementationBase, SwiftProtob
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPFileDownload) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPFileDownload) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -252,7 +252,7 @@ extension IGPFileDownload: SwiftProtobuf._MessageImplementationBase, SwiftProtob
 }
 
 extension IGPFileDownload.IGPSelector: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "FILE"),
     1: .same(proto: "SMALL_THUMBNAIL"),
     2: .same(proto: "LARGE_THUMBNAIL"),
@@ -261,7 +261,7 @@ extension IGPFileDownload.IGPSelector: SwiftProtobuf._ProtoNameProviding {
 }
 
 extension IGPFileDownloadResponse: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "IGP_response"),
     4: .standard(proto: "IGP_bytes"),
   ]
@@ -287,7 +287,7 @@ extension IGPFileDownloadResponse: SwiftProtobuf._MessageImplementationBase, Swi
     return _storage
   }
 
-  func _protobuf_generated_isEqualTo(other: IGPFileDownloadResponse) -> Bool {
+  public func _protobuf_generated_isEqualTo(other: IGPFileDownloadResponse) -> Bool {
     if _storage !== other._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((_storage, other._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
