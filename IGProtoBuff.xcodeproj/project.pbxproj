@@ -177,6 +177,7 @@
 		FA39E3D21F8BAE4700F723E0 /* UserVerify.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E2A31F8BAD8600F723E0 /* UserVerify.pb.swift */; };
 		FA39E3D31F8BAE4700F723E0 /* UserVerifyNewDevice.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E2DB1F8BAD9C00F723E0 /* UserVerifyNewDevice.pb.swift */; };
 		FA76382E1E2FFD5E00C24391 /* IGProtoBuff.h in Headers */ = {isa = PBXBuildFile; fileRef = FA76382C1E2FFD5E00C24391 /* IGProtoBuff.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA8D69221F8BB6700003AEC9 /* SwiftProtobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0250951F8BB4F1007506D4 /* SwiftProtobuf.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -360,6 +361,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA8D69221F8BB6700003AEC9 /* SwiftProtobuf.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
